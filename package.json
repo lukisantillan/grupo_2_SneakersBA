@@ -1,0 +1,25 @@
+{
+  "name": "sneakersba",
+  "version": "1.0.0",
+  "description": "-Somos un e-commerce dedicado al calzado deportivo, orientado a toda persona interesada en el mundo de los sneakers\r # Integrantes ✔️\r - Matias Rodriguez, 34 años. Empleado de comercio\r - Lucas Santillán, 19 años. Estudiante\r - Rubén Cabrera, 30 años. Fotógrafo\r - Daniel Barrientos, 59 años. Gerente de tecnología\r - Juan pablo Fernández, 20 años. Estudiante",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukisantillan/grupo_2_SneakersBA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukisantillan/grupo_2_SneakersBA/issues"
+  },
+  "homepage": "https://github.com/lukisantillan/grupo_2_SneakersBA#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7"
+  }
+}
