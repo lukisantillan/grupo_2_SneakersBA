@@ -14,3 +14,21 @@ app.listen(APP_PORT, () => {
 app.get('/', (req, res) => {
     res.sendFile(path.resolve('views/index.html'));
 });
+
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname + '/views/register.html'));
+});
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname + '/views/login.html'))
+});
+
+app.post('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/views/home.html'))
+});
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname + '/views/login.html'));
+});
+
+app.get('/productCar', (req, res) => {
+    res.sendFile(path.join(__dirname + '/views/productCart.html'))
+});
