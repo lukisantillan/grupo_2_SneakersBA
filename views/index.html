@@ -23,9 +23,9 @@
         </div>
         <nav class="main-nav">
                 <ul class="site-nav">
-                    <li> Hombre </li>
-                    <li> Mujer </li>
-                    <li> Sale </li>
+                    <a href="#"><li> Productos </li></a>
+                    <a href="#"><li> Marcas </li></a>
+                    <a href="#"><li> Sale </li></a>
                 </ul>
                 <ul class="user-nav">
                     <li><i class="fa-solid fa-magnifying-glass"></i></li>
@@ -34,165 +34,81 @@
                     <li><a href="/login"><i class="fa-regular fa-user"></i></a></li>
                 </ul>
         </nav>
-
     </header>
 
     <main>
-        <div id="conte-items-carrusel">
+            <div class="container-all">
+                <input type="radio" id="1" name="image-slide" hidden />
+                <input type="radio" id="2" name="image-slide" hidden />
+                <input type="radio" id="3" name="image-slide"  hidden/>
 
-            <div class="item-carrusel" id="item-carrusel-1">
-
-                <div class="card-Carrusel" id="card-carrusel-1">
-                    <img src="" alt="" class="img-carrusel">
-                </div>
-                <div class="arrow-carrusel">
-                    <div class="arrow-carrusel">
-                        <a href="#item-carrusel-3">
-                            <i class="fa-solid fa-circle-arrow-left"></i>
-                        </a>
-                        <a href="#item-carrusel-2">
-                            <i class="fa-solid fa-circle-arrow-right"></i>
-                        </a>
+                <div class="slide">
+                     <div class="item-slide">
+                        <img src="/images/slider1.png">
+                    </div>
+                    <div class="item-slide">
+                        <img src="/images/slider2.png">
+                    </div>
+                    <div class="item-slide">
+                        <img src="/images/slider3.png">
                     </div>
                 </div>
 
+                <div class="pagination">
+                    <label class="pagination-item" for="1">
+                        <img src="/images/slider1.png">
+                    </label>
+                    <label class="pagination-item" for="2">
+                        <img src="/images/slider2.png">
+                    </label>
+                    <label class="pagination-item" for="3">
+                        <img src="/images/slider3.png">
+                    </label>
+                </div>
             </div>
-
-            <div class="item-carrusel" id="item-carrusel-2">
-
-                <div class="card-carrusel" id="card-carrusel-2">
-                    <img src="" alt="" class="img-carrusel">
+            <section class="main-products">
+                <h3>Productos destacados</h3>
+                <div class="products">
+                    <article>
+                        <img src="\images\Adidas-Forum-84-Hi-White-Gold-Foil.jpg" alt="Adidas Forum 84" class="product_img">
+                        <div class="main-article">
+                            <p class="price">$106.770</p>
+                            <h4 class="description">Adidas Forum 84 Hi White GoldFoil</h4>
+                            </div>
+                    </article>
+                    <article>
+                        <img src="\images\adidas-Forum-Buckle-Low-Bad-Bunny-Blue-Tint.jpg" alt="Adidas bad bunny blue" class="product_img">
+                        <div class="main-article">
+                            <p class="price">$230.000</p>
+                            <h4 class="description">Adidas Forum Buckle Low Bad-Bunny BlueTint</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="\images\adidas-NMD-R1-Core-Black-Lush-Red-2015-2017.jpg" alt="Adidas nmd r1 core black" class="product_img">
+                        <div class="main-article">
+                            <p class="price">$50.500</p>
+                            <h4 class="description">Adidas NMD R1 Core Black Lush Red</h4>
+                        </div>
+                    </article>
+                    </article>
                 </div>
-                <div class="arrow-carrusel">
-                    <a href="#item-carrusel-1">
-                        <i class="fa-solid fa-circle-arrow-left"></i>
-                    </a>
-                    <a href="#item-carrusel-3">
-                        <i class="fa-solid fa-circle-arrow-right"></i>
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="item-carrusel" id="item-carrusel-3">
-
-                <div class="card-carrusel" id="card-carrusel-3">
-                    <img src="" alt="" class="img-carrusel">
-                </div>
-                <div class="arrow-carrusel">
-                    <div class="arrow-carrusel">
-                        <a href="#item-carrusel-2">
-                            <i class="fa-solid fa-circle-arrow-left"></i>
-                        </a>
-                        <a href="#item-carrusel-1">
-                            <i class="fa-solid fa-circle-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        <div id="conte-puntos">
-
-            <a href="#item-carrusel-1"><i class="fa-solid fa-circle"></i></a>
-            <a href="#item-carrusel-2"><i class="fa-solid fa-circle"></i></a>
-            <a href="#item-carrusel-3"><i class="fa-solid fa-circle"></i></a>
-
-        </div>
-        <div class="featured-products">
-
-            <article class="product">
-
-                <a href="">
-                    <img src="" alt="">
-                </a>
-
-                <div class="info-featured-product">
-
-                    <h3 class="name-product"> Nombre Producto1 </h3>
-                    <p class="price-product"> $Precio </p>
-
-                </div>
-
-            </article>
-
-            <article class="product">
-
-                <a href="">
-                    <img src="" alt="">
-                </a>
-
-                <div class="info-featured-product">
-
-                    <h3 class="name-product"> Nombre Producto2 </h3>
-                    <p class="price-product"> $Precio </p>
-
-                </div>
-
-            </article>
-
-            <article class="product">
-
-                <a href="">
-                    <img src="" alt="">
-                </a>
-
-                <div class="info-featured-product">
-
-                    <h3 class="name-product"> Nombre Producto3 </h3>
-                    <p class="price-product"> $Precio </p>
-
-                </div>
-
-            </article>
-
-        </div>
-        <div class="sections-main">
-            <section class="sections">
-
-                <div class="section">
-
-                    <a href="">
-                        <img class="image-section" src="/images/hombreSneaker.jpg" alt=" hombreSneaker ">
-                    </a>
-
-                    <h3 class="name-section"> HOMBRE </h3>
-
-                </div>
-
             </section>
-
-            <section class="sections">
-
-                <div class="section">
-
-                    <a href="">
-                        <img class="image-section" src="/images/mujerSneaker.jpg" alt=" mujerSneaker ">
-                    </a>
-
-                    <h3 class="name-section"> MUJER </h3>
-
+            <section class="main-products2">
+                <div class="products">
+                <article>
+                    <img src="\images\productos.png" alt="productos" class="producto_img">
+                    <h3>PRODUCTOS</h3>
+                </article> 
+                <article>
+                    <img src="\images\marcas.png" alt="marcas" class="marcas_img">
+                    <h3>MARCAS</h3>
+                </article> 
+                <article>
+                    <img src="\images\SALE.png" alt="sale" class= "sale_img">
+                    <h3>SALES</h3>
+                </article>
                 </div>
-
             </section>
-
-
-            <section class="sections">
-
-                <div class="section">
-
-                    <a href="">
-                        <img class="image-section" src="/images/saleSneaker.jpg" alt=" saleSneaker ">
-                    </a>
-
-                    <h3 class="name-section"> SALE </h3>
-
-                </div>
-
-            </section>
-
-        </div>
     </main>
 
     <footer>
@@ -221,6 +137,14 @@
                 <div class="links">
                     <a href="#">Locales</a>
                     <a href="#">Email</a>
+                </div>
+            </div>
+            <div class="desplegable-shop">
+                <button class="boton">Shop</button>
+                <div class="links">
+                    <a href="#">Productos</a>
+                    <a href="#">Marcas</a>
+                    <a href="#">Sale</a>
                 </div>
             </div>
         </div>
