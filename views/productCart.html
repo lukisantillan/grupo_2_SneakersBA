@@ -1,119 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=<>>>>>, initial-scale=1.0">
     <title>Sneakers BA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-
+    <link rel="stylesheet" href="/css/styles-cart.css"></head>
 <body>
-    <div>
-        <h3> 6 cuotas sin interés con Visa </h3>
-    </div>
-
-    <header class="main-header">
-
-        <div>
-            <img id="nav-logo" src="/images/Logo1.png" alt="Logo Sneakers">
+    <header>
+        <div class="promo-cuotas">
+            <h3> 6 cuotas sin interés con Visa </h3>
         </div>
-        <nav class="barra-de-navegacion">
-            <div>
-                <ul>
-                    <li> Hombre </li>
-                    <li> Mujer </li>
-                    <li> Sale </li>
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+        <div class="logo">
+            <a href="/"><img id="snk-logo"src="/images/Logo1.png" alt="Logo Sneakers"></a>
+        </div>
+        <nav class="main-nav">
+                <ul class="site-nav">
+                    <a href="#"><li> Productos </li></a>
+                    <a href="#"><li> Marcas </li></a>
+                    <a href="#"><li> Sale </li></a>
                 </ul>
-            </div>
-
-            <div>
-
-                <i class="fa-solid fa-magnifying-glass"></i>
-                </i> <input class="barra-busqueda" type="text" placeholder="Buscar productos, marcas">
-            </div>
-
-            <div>
-                <a href="/productCar">
-                    <i class="fa-sharp fa-solid fa-cart-shopping"> </i>
-                </a>
-
-                <a href="/login">
-                    <i class="fa-regular fa-user"></i>
-                </a>
-
-                <a href="/register">
-                    <i class="fa-solid fa-user-plus"></i>
-                </a>
-            </div>
-
+                <ul class="user-nav">
+                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li class="barra-busqueda"><input type="text" placeholder="Buscar productos, marcas"></li>
+                    <li><a href="/productCar"><i class="fa-sharp fa-solid fa-cart-shopping"> </i></a></li>
+                    <li><a href="/login"><i class="fa-regular fa-user"></i></a></li>
+                </ul>
         </nav>
-
     </header>
-
-
-    <footer>
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> SHOP </h4>
-
-            <div>
-                <a class="footer-info" href=""> Hombres </a>
-                <a class="footer-info" href=""> Mujeres </a>
-                <a class="footer-info" href=""> Sale </a>
-            </div>
-
-        </section>
-
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> ASISTENCIA </h4>
-
-            <div>
-                <a class="footer-info" href=""> Términos y condiciones </a>
-                <a class="footer-info" href=""> Defensa al consumidor </a>
-                <a class="footer-info" href=""> Guia de talles </a>
-                <a class="footer-info" href=""> Formas de pago </a>
-                <a class="footer-info" href=""> Cómo comprar </a>
-            </div>
-
-        </section>
-
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> NOSOTROS </h4>
-
-            <div>
-                <a class="footer-info" href=""> Acerca de SNKR BA </a>
-                <a class="footer-info" href=""> Trabaja con nosotros </a>
-                <a class="footer-info" href=""> Prensa </a>
-                <a class="footer-info" href=""> Informacion corporativa </a>
-            </div>
-
-        </section>
-
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> CONTACTO </h4>
-
-            <div>
-                <a class="footer-info" href=""> Locales </a>
-                <a class="footer-info" href=""> atencionclientes@snkrba.com </a>
-
-                <div class="icons-footer">
-
-                    <a href=""> <i class="fa-brands fa-instagram"></i> </a>
-                    <a href=""> <i class="fa-brands fa-whatsapp"></i> </a>
-                    <a href=""> <i class="fa-brands fa-facebook-f"></i> </a>
-
+    <main>
+        <div class="cartMain">
+            <div class="grupo1">
+                <div class="cartTop">
+                    <h1 class="cartTitle">TU CARRITO</h1>
+                    <p>Total 2 productos</p>
+                    <p class="productPrice">$ 47.780</p>
                 </div>
-                
+                <div class="cartList">
+                    <div class="cartItem">
+                        <img class="itemImage" src="images/Adidas-Forum-84-Hi-White-Gold-Foil.jpg" alt="">
+                        <div class="itemDetail">
+                            <h4 class="productName">Adidas Forum 84</h4>
+                            <p class="productDesc">CLOUD WHITE / CORE BLACK / SOLAR RED.</p>
+                            <p class="productSize">Tamaño: 43 [UK 10]</p>
+                            <div class="productPriceQtyCaret">
+                                <div class="productPrice">$ 28.790 </div>
+                                <div class="productQty">Cantidad: 1</div>
+                                <div><i class="fa-regular fa-square-caret-down"></i></div>
+                            </div> 
+                        </div>                      
+                        <div class="itemActions">
+                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="cartItem">
+                        <img class="itemImage" src="images/adidas-Forum-Buckle-Low-Bad-Bunny-Blue-Tint.jpg" alt="">
+                        <div class="itemDetail">
+                            <h4 class="productName">Adidas Forum Bucle</h4>
+                            <p class="productDesc">CLOUD WHITE / CORE BLACK / SOLAR RED.</p>
+                            <p class="productSize">Tamaño: 43 [UK 10]</p>
+                            <div class="productPriceQtyCaret">
+                                <div class="productPrice">$ 18.990 </div>
+                                <div class="productQty">Cantidad: 1</div>
+                                <div><i class="fa-regular fa-square-caret-down"></i></div>
+                            </div> 
+                        </div>                      
+                        <div class="itemActions">
+                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-        </section>
+            <div class="grupo2">
+                <!-- Código PROMOCIONAL -->
+                <form class="codPromocional" action="#" method="get">
+                    <input class="codPromocional" type="Código promocional" id="codigoProm" name="codigoProm" placeholder="Ingresa tu código de promoción" size="40">
+                </form>
+                <div class="orderSummary">
+                    <h3>RESUMEN DEL PEDIDO</h3>
+                    <div class="orderDetail">
+                        <div class="orderCount orderLine">
+                        <p>2 PRODUCTOS</p>
+                        <p>$ 47.780</p>
+                        </div>
+                        <div class="orderDelivery orderLine">
+                            <p>Entrega</p>
+                            <p>GRATIS</p>
+                        </div>
+                        <div class="orderAmount orderLine">
+                            <h4>TOTAL</h4>
+                            <h4>$47.780</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="botonPago">
+                    <button class="botonPagar" type="submit" id="pagar">PAGAR</button>
+                </div>
+                <div class="paymentOptions">
+                    <h3>OPCIONES DE PAGO</h3>
+                                        
+                    <div class="cardLogos">
+                        <img class="cardLogo" src="images/visa.png" alt="">
+                        <img class="cardLogo" src="images/master.png" alt="">
+                        <img class="cardLogo" src="images/american.png" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="cajas-desplegables">
+            <div class="desplegable">
+                <button class="boton">Asistencia</button>
+                <div class="links">
+                    <a href="#">Terminos y condiciones</a>
+                    <a href="#">Defesa del consumir</a>
+                    <a href="#">Guia de talles</a>
+                    <a href="#">Formas de pago</a>
+                    <a href="#">Como comprar</a>
+                </div>
+            </div>
+            <div class="desplegable">
+                <button class="boton">Nosotros</button>
+                <div class="links">
+                    <a href="#">Acerca de SNKR BA</a>
+                    <a href="#">Trabaja con nosotros</a>
+                    <a href="#">Prensa</a>
+                    <a href="#">Informacion corporativa</a>
+                </div>
+            </div>
+            <div class="desplegable">
+                <button class="boton">Contacto</button>
+                <div class="links">
+                    <a href="#">Locales</a>
+                    <a href="#">Email</a>
+                </div>
+            </div>
+            <div class="desplegable-shop">
+                <button class="boton">Shop</button>
+                <div class="links">
+                    <a href="#">Productos</a>
+                    <a href="#">Marcas</a>
+                    <a href="#">Sale</a>
+                </div>
+            </div>
+        </div>
+        <div class="iconos">
+            <div class="caja1">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="caja2">
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="caja3">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
 
     </footer>
-
 </body>
+</html>
