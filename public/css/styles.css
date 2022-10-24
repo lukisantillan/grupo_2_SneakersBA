@@ -12,6 +12,13 @@ body {
     height: 100%;
 }
 
+:root {
+    --rosa: #e94560;
+    --azul: #16213e;
+    --azul-claro: #0f3460;
+    --violeta: #533483;
+}
+
 /*----HEADER RUBEN----*/
 
 header {
@@ -99,13 +106,6 @@ header div.logo {
 
 
 /*--- MAIN INDEX ---*/
-
-:root{
-    --rosa: #e94560;
-    --azul: #16213e;
-    --azul-claro:#0f3460 ;
-    --violeta:#533483;
-}
 
 main {
     display: flex;
