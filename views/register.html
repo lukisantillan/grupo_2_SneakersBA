@@ -7,149 +7,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sneakers BA</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-login-register.css">
 </head>
 
 <body>
-    <div>
-        <h3> 6 cuotas sin interés con Visa </h3>
-    </div>
-
-    <header class="main-header">
-
-        <div>
-            <img id="nav-logo" src="/images/Logo1.png" alt="Logo Sneakers">
+    <header>
+        <div class="promo-cuotas">
+            <h3> 6 cuotas sin interés con Visa </h3>
         </div>
-        <nav class="barra-de-navegacion">
-            <div>
-                <ul>
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+        <div class="logo">
+            <a href="/"><img id="snk-logo"src="/images/Logo1.png" alt="Logo Sneakers"></a>
+        </div>
+        <nav class="main-nav">
+                <ul class="site-nav">
                     <li> Hombre </li>
                     <li> Mujer </li>
                     <li> Sale </li>
                 </ul>
-            </div>
-
-            <div>
-
-                <i class="fa-solid fa-magnifying-glass"></i>
-                </i> <input class="barra-busqueda" type="text" placeholder="Buscar productos, marcas">
-            </div>
-
-            <div>
-                <a href="/productCar">
-                    <i class="fa-sharp fa-solid fa-cart-shopping"> </i>
-                </a>
-
-                <a href="/login">
-                    <i class="fa-regular fa-user"></i>
-                </a>
-
-                <a href="/register">
-                    <i class="fa-solid fa-user-plus"></i>
-                </a>
-            </div>
-
+                <ul class="user-nav">
+                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li class="barra-busqueda"><input type="text" placeholder="Buscar productos, marcas"></li>
+                    <li><a href="/productCar"><i class="fa-sharp fa-solid fa-cart-shopping"> </i></a></li>
+                    <li><a href="/login"><i class="fa-regular fa-user"></i></a></li>
+                </ul>
         </nav>
 
     </header>
+           
+    <div class="contenido">    
+            <form method="post" action="" id="form-padre">
+                <div class="form-hijo">
+                    <h1>Registro</h1>
+                    <div class="grupo">
+                        <input type="text" name=""  id="name" minlength="3" required><span class="barra"></span>
+                        <label for=""> Nombre: </label>
+                    </div>
 
-    <form method="post" action="/" class="create-account">
+                    <div class="grupo">
+                        <input type="text" name="" id="name" required><span class="barra"></span>
+                        <label for=""> Apellido: </label>
+                    </div>
 
-        <div class="control-form">
-            <label> Nombre: </label>
-            <input type="text" name="nombre" class="control" minlength="3" required>
-        </div>
+                    <div class="grupo">
+                        <input type="email" name="" id="name" required><span class="barra"></span>
+                        <label for=""> Email: </label>
+                    </div>
 
-        <div class="control-form">
-            <label> Apellido: </label>
-            <input type="text" name="apellido" class="control" required>
-        </div>
+                    <div class="grupo">
+                        <input type="text" name="" id="name" required minlength="5"><span class="barra"></span>
+                        <label for=""> Nombre de usuari@: </label>
+                    </div>
 
-        <div class="control-form">
-            <label> Email: </label>
-            <input type="email" name="email" class="control" required>
-        </div>
+                    <div class="grupo">
+                        <input type="password" name="" id="name" required minlength="8"><span class="barra"></span>
+                        <label for=""> Contraseña: </label>
+                    </div>
 
-        <div class="control-form">
-            <label> Nombre de usuari@: </label>
-            <input type="text" name="nombreDeUsuario" class="control" required minlength="5">
-        </div>
-
-        <div class="control-form">
-            <label> Contraseña: </label>
-            <input type="password" name="contraseña" class="control" required minlength="8">
-        </div>
-
-        <div class="control-form">
-            <label> Confirmar contraseña: </label>
-            <input type="password" name="confirmarContraseña" class="control" required minlength="8">
-        </div>
-        <div>
-            <button type="submit" class="boton-formulario"> Crear </button>
-        </div>
-        </div>
-    </form>
-
+                    <div class="grupo">
+                        <input type="password" name="" id="name" required minlength="8"><span class="barra"></span>
+                        <label for=""> Confirmar contraseña: </label>
+                    </div>
+                    
+                    <button type="submit"> ENVIAR </button>
+                    
+                </div>    
+            </form>    
+    </div>        
 
     <footer>
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> SHOP </h4>
-
-            <div>
-                <a class="footer-info" href=""> Hombres </a>
-                <a class="footer-info" href=""> Mujeres </a>
-                <a class="footer-info" href=""> Sale </a>
-            </div>
-
-        </section>
-
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> ASISTENCIA </h4>
-
-            <div>
-                <a class="footer-info" href=""> Términos y condiciones </a>
-                <a class="footer-info" href=""> Defensa al consumidor </a>
-                <a class="footer-info" href=""> Guia de talles </a>
-                <a class="footer-info" href=""> Formas de pago </a>
-                <a class="footer-info" href=""> Cómo comprar </a>
-            </div>
-
-        </section>
-
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> NOSOTROS </h4>
-
-            <div>
-                <a class="footer-info" href=""> Acerca de SNKR BA </a>
-                <a class="footer-info" href=""> Trabaja con nosotros </a>
-                <a class="footer-info" href=""> Prensa </a>
-                <a class="footer-info" href=""> Informacion corporativa </a>
-            </div>
-
-        </section>
-
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> CONTACTO </h4>
-
-            <div>
-                <a class="footer-info" href=""> Locales </a>
-                <a class="footer-info" href=""> atencionclientes@snkrba.com </a>
-
-                <div class="icons-footer">
-
-                    <a href=""> <i class="fa-brands fa-instagram"></i> </a>
-                    <a href=""> <i class="fa-brands fa-whatsapp"></i> </a>
-                    <a href=""> <i class="fa-brands fa-facebook-f"></i> </a>
-                    
+        <div class="cajas-desplegables">
+            <div class="desplegable">
+                <button class="boton">Asistencia</button>
+                <div class="links">
+                    <a href="#">Terminos y condiciones</a>
+                    <a href="#">Defesa del consumir</a>
+                    <a href="#">Guia de talles</a>
+                    <a href="#">Formas de pago</a>
+                    <a href="#">Como comprar</a>
                 </div>
-
             </div>
-
-        </section>
+            <div class="desplegable">
+                <button class="boton">Nosotros</button>
+                <div class="links">
+                    <a href="#">Acerca de SNKR BA</a>
+                    <a href="#">Trabaja con nosotros</a>
+                    <a href="#">Prensa</a>
+                    <a href="#">Informacion corporativa</a>
+                </div>
+            </div>
+            <div class="desplegable">
+                <button class="boton">Contacto</button>
+                <div class="links">
+                    <a href="#">Locales</a>
+                    <a href="#">Email</a>
+                </div>
+            </div>
+        </div>
+        <div class="iconos">
+            <div class="caja1">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="caja2">
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="caja3">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
 
     </footer>
 </body>

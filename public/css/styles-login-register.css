@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica';
+    background-color: var(--azul)
+}
+
+/*----HEADER RUBEN----*/
+
+header {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header ul li {
+    list-style-type: none;
+
+}
+
+.promo-cuotas {
+    background-color: var(--azul);
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
+header div.logo {
+    width: 30%;
+}
+
+#snk-logo {
+    width: 100%;
+}
+
+.burger-menu {
+    font-size: 30px;
+    margin: 30px;
+
+}
+.burger-menu i {
+    padding: 15px;
+
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+}
+
+.main-nav i {
+    font-size: 18px;
+    color: black;
+}
+
+.main-nav ul {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.main-nav li {
+    margin: 0 5px;
+}
+
+.main-nav .site-nav {
+    display: none;
+}
+
+.barra-busqueda {
+    display: none;
+}
+
+.promo-cuotas h3 {
+    color: #fff;
+    font-size: 100%;
+    font-weight: lighter;
+}
+
+/*--- ACA TERMINA HEADER RUBEN ----*/
+
+
+/*--- MAIN INDEX ---*/
+
+:root{
+    --rosa: #e94560;
+    --azul: #16213e;
+    --azul-claro:#0f3460 ;
+    --violeta:#533483;
+}
+
+#conte-items-carrusel{
+    border: 3px solid black;
+    height: 400px;
+    overflow: hidden;
+}
+
+.item-carrusel {
+    border: 1px solid black;
+    height: 100%;
+    position: relative;
+}
+
+.card-carrusel {
+    height: 100%;
+}
+
+.arrow-carrusel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+a {
+    text-decoration: none;
+
+}
+.fa-circle-arrow-left, .fa-circle-arrow-right{
+    color: var(--rosa);
+
+}
+
+#conte-puntos{
+    background-color: var(--rosa);
+    display: flex;
+    justify-content: space-around;
+}
+.fa-circle{
+    font-size: 10px;
+    color: white;
+    margin: 10px;
+}
+.img-carrusel{
+    width: 100%;
+    height: 100%;
+}
+
+/*--- FOOOTER RUBEN----*/
+
+.boton {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 16px;
+    font-size: 18px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 13px;
+}
+
+.links {
+    background-color: transparent;
+    width: 185px;
+    display: none;
+}
+
+.links a:hover {
+    background-color: blueviolet;
+}
+
+.desplegable:hover .links{
+    display: block;
+}
+
+.caja1 {
+  
+    text-align: center;
+    margin: 5px;
+}
+
+.caja2{
+    text-align: center;
+    margin: 5px;
+}
+
+.caja3{
+    text-align: center;
+     margin: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.iconos i {
+    color: black;
+    font-size: 20px
+}
+
+.iconos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 15px;
+
+}
+
+/*--- ACÁ TERMINA FOOOTER RUBEN----*/
+
+
+/*Style css register*/
+
+div.contenido{
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 35px;
+
+}
+
+form#form-padre{
+    background: #fff;
+    padding: 20px 0px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+
+}
+
+div.form-hijo{
+    width: 80%;
+    margin: auto;
+}
+
+div.form-hijo .grupo{
+    position: relative;
+    margin: 35px;
+    
+}
+
+input#name{
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #16213e
+}
+
+input#name:focus{
+    outline: none;
+    color: #5e5d5d
+}
+
+label{
+    color: #565454;
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+input#name:focus~label,
+input#name:valid~label{
+    top: -14px;
+    font-size: 12px;
+    color: #0f3460;
+}
+
+button{
+    font-family: 'helvetica';
+    background-color: #0f3460;
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    color: #fff;
+    height: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*Media Query*/
+
+@media (min-width:400px) {
+    div.form-hijo{
+        width: 100%;
+        margin: auto;
+    }
+    
+}
+
+
+/*styles form login*/
+
+.contenedor .formulario{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    margin: 20%;
+    background-color: #0f3460;
+}
+
+h1{
+    font-size: 18px;
+    color: white;
+    margin: 8px 0px;
+}
+
+.boton-formulario{
+    margin-top: 20px ;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+a.link-register{
+    color: azure;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+div.recuperar-contraseña{
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+a{
+    color: white;
+
+}
+
+div.flex-media-query{
+    text-align: center;
+}
+
+/*Media query*/
+
+@media (min-width:720px){
+    div.flex-media-query{   
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    }
+}
+
+
