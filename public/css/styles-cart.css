@@ -10,13 +10,6 @@ body {
     background-color: var(--azul);
     margin: 5px;
 }
-
-:root {
-    --rosa: #e94560;
-    --azul: #16213e;
-    --azul-claro: #0f3460;
-    --violeta: #533483;
-}
 /*----HEADER RUBEN----*/
 
 header {
@@ -161,7 +154,6 @@ footer {
     width: 100%;
     flex-wrap: wrap;
     align-self: flex-end;
-    border-top: solid 2px var(--azul-claro);
 }
 
 .iconos i {
@@ -184,8 +176,6 @@ footer {
 .cartMain {
     display:flex;
     flex-direction: column;
-    background-color: #fff;
-    border-top: solid 2px var(--azul-claro);
 }
 .cartMain .grupo1,.grupo2 {
     display: flex;
@@ -256,11 +246,19 @@ footer {
     padding: 10px;
  }
  
+ .cartMain .productName {    
+ }
+ 
+ .cartMain .productDesc {
+ }
+ .cartMain .productQty {}
+ 
  .cartMain .orderSummary {
     margin-left: 15px;
     margin-right: 15px;
  }
-
+ .cartMain .orderDetail {
+ }
  .cartMain .orderLine {
      display: flex;
      justify-content:space-between;
@@ -286,9 +284,10 @@ footer {
  }
  
 
-/* MEDIA QUERY PARA DESKTOP product car */
+/* MEDIA QUERY PARA DESKTOP */
 
 @media (min-width:1024px) {
+
     .cartMain{
         display: flex;
         flex-direction: row;
@@ -317,32 +316,33 @@ footer {
      }
     
     .cartMain  form  {
-        width:30%;
         order: 3;
      }
 
     .cartMain .cardLogos {
         display:flex;
+        flex-direction: row;
         justify-content: space-around;
+        border: 1px solid black;
     }
-    .cardLogo {
-        margin-top: 20px;
-        width: 50px;
-        height: 40px;
+    .cartMain .logo {
+        width: 60px;
+        height: 60px;
      }
     
-     .paymentOptions {
+     .cartMain .paymentOptions {
         order:4;
-        display:block;  
-        width: 30%;
-        margin-left: 15px;
-        order: 6;
+        margin:50px;
+        display:inline-block;  
     }
 }
 
-/*Media Query header y footer */
 
-@media (min-width: 550px) {
+
+/*--- MEDIASQ INDEX---*/
+
+
+@media (min-width: 550px){
     .main-nav {
         display: flex;
         justify-content: space-between;
@@ -354,31 +354,31 @@ footer {
         text-align: center;
         align-items: center;
         margin-left: 20px;
-
+        
     }
 
     .main-nav li {
         margin: 0 5px;
     }
 
-
-    main section article .description {
+   
+     main section article .description{
         display: block;
     }
 
-    main section article {
+    main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
-    div.burger-menu i {
+    div.burger-menu i{
         display: none;
     }
-
+    
     .products {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-    }
+    } 
 
     .products article {
         width: 45%;
@@ -388,25 +388,24 @@ footer {
         flex-wrap: nowrap;
     }
 
-
+    
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px){
 
     .products article {
         width: 30%;
     }
-
+    
 
     .main-nav li {
         margin: 0 21px;
     }
-
     .main-nav .site-nav {
         display: flex;
     }
 
-
+    
     .barra-busqueda {
         display: block;
     }
@@ -438,33 +437,33 @@ footer {
         padding: 13px;
     }
 
-    .cajas-desplegables {
-        display: flex;
-        flex-direction: row-reverse;
-    }
+.cajas-desplegables {
+    display: flex;
+    flex-direction: row-reverse;
+}
 
-    .desplegable-shop {
-        display: block;
-    }
+ .desplegable-shop {
+    display: block;
+}
 
-    .iconos {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 15px;
-    }
+.iconos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 15px;
+}
 
-    .main-products2 {
-        display: block;
-        margin-top: 40px;
-        margin-bottom: 15px;
-    }
+.main-products2 {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
 
-    .main-products2 article h3 {
-        text-align: center;
-        color: #533483;
-        padding: 5px;
-    }
+.main-products2 article h3 {
+    text-align: center;
+    color: #533483;
+    padding: 5px;
+}
 
 
 }
@@ -504,3 +503,5 @@ footer {
         margin-right: 0;
     }
 }
+/*
+*/
