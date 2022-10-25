@@ -1,65 +1,133 @@
-
-.body{width: 100%;
-height: 100%;
-font-size: 10px;    
-font-family: 'Helvetica';
-background-image: url("/images/bg.png");
-background-attachment: fixed;
-background-size: cover;
-height: 100%;
+:root {
+    --rosa: #e94560;
+    --azul: #16213e;
+    --azul-claro: #0f3460;
+    --violeta: #533483;
 }
 
+@keyframes colorGris{
+    0%{
+        color: #fff;
+    }
 
-.title{
+    25%{
+        color:#808080;
+        width: 255px;
+        height: 75px;
+        font-size: 20px;
+       
+    }
+    50%{
+        color:#808080;
+        width: 300px;
+        height: 90px;
+        font-size:25px;
+    }
 
-text-align: center;
-font-size: 40px;
-color: #16213e;
-font-weight: 100;
+    75%{
+        color:#808080;
+        width: 255px;
+        height: 75px;
+        font-size: 20px;
+    }
 
+    100%{
+        color: #fff;
+    }
 }
 
-
-.conteiner{
-
-    width: 1000;
-    max-width: 1200px;
-    height: 430px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    
+#caja-detail {
+    background-color: #fff;
 }
 
-.conteiner .card{
-    width: 330px;
-    height: 430px;
-    border-radius: 8px;
-    box-shadow: #16213e;
-    overflow: hidden;
-    margin: 20px;
+.image-product {
+    border-bottom: solid 1px #000;
+}
+
+.titulo-product {
+    font-size: 25px;
+    margin: 2%;
+}
+
+.price-product {
+    font-size: 15px;
+    color: var(--rosa);
+    margin: 2%;
+}
+
+p {
+    margin: 2%;
+}
+
+.select-talles {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 2%;
     text-align: center;
-    transition: all 0.10s;
+    width: 85px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid var(--violeta);
+    outline: none;
+    background-color: var(--rosa);
+    border: 0;
 }
 
-.conteiner .card{
-    transform: translate(-10px);
-    box-shadow: #0f3460;
+.addToCar{
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
 }
 
-.container .card img{
-    width: 300px;
-    height: 200px;
+.addToCar:hover{
+    animation-name: colorGris;
+    animation-duration: 5000ms;
+}
+.likeProduct{
+    background-color: #fff;
+    border:0px;
 }
 
-.container .card p{padding: 8 1rem;
-    font-size: 16px;
-    font-weight: 300;}
-
-
-.container .card a{font-weight: 500px;
-    text-decoration: none;
-    color: #0f3460;
+.fa-heart{
+  font-size: 20px;
 }
 
-.container .card h4{font-weight: 300;}
+.fa-heart:hover{
+    color: #e94560;
+}
+
+.desplegableDescription{
+    border-top: solid 1px #000;
+    border-bottom: solid 1px #000;
+}
+.desplegableDescription:hover .textDescription{
+    display: inline;
+}
+.botonDescription {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.textDescription p {
+    color: black;
+    padding: 13px;
+}
+
+.textDescription {
+    background-color: transparent;
+    width: 185px;
+    display: none;
+}
+
+.buttons-product{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}

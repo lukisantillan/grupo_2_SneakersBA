@@ -7,148 +7,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sneakers BA</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/public/css/styles-products-featured.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-products-featured.css">
 </head>
 
-<body>
-    <div class="promo">
+<header>
+    <div class="promo-cuotas">
         <h3> 6 cuotas sin interés con Visa </h3>
     </div>
+    <div class="burger-menu">
+        <i class="fa fa-bars burger"></i>
+    </div>
+    <div class="logo">
+        <a href="/"><img id="snk-logo" src="/images/Logo1.png" alt="Logo Sneakers"></a>
+    </div>
+    <nav class="main-nav">
+        <ul class="site-nav">
+            <a href="#">
+                <li> Productos </li>
+            </a>
+            <a href="#">
+                <li> Marcas </li>
+            </a>
+            <a href="#">
+                <li> Sale </li>
+            </a>
+        </ul>
+        <ul class="user-nav">
+            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li class="barra-busqueda"><input type="text" placeholder="Buscar productos, marcas"></li>
+            <li><a href="/productCar"><i class="fa-sharp fa-solid fa-cart-shopping"> </i></a></li>
+            <li><a href="/login"><i class="fa-regular fa-user"></i></a></li>
+        </ul>
+    </nav>
+</header> <br> <br>
 
-    <header class="header">
+<div id="caja-detail">
 
-        <div>
-            <img id="nav-logo" src="../public/images/Logo1.PNG" alt="snk-logo">
+    <div class="images-product">
+        <img class="image-product" src="/images/adidas-Yeezy-Boost-350-V2-Dazzling-Blue.jpg" alt="Adidas Yeezy">
+    </div>
+
+    <div class="information-product">
+        <h3 class="titulo-product"> Adidas Yeezy Boost 350 V2 Dazzling Blue </h3>
+        <h5 class="price-product">$54.000</h5>
+        <p> Talle </p>
+        <select class="select-talles" name="talle">
+
+            <option>36</option>
+
+            <option>37</option>
+
+            <option>38</option>
+
+            <option>39</option>
+
+            <option>40</option>
+
+        </select>
+
+        <div class="buttons-product">
+            <button class="addToCar" type="submit" id="pagar">Agregar al carrito <i
+                    class="fa-solid fa-angles-right"></i>
+            </button>
+            <button class="likeProduct"> <i class="fa-solid fa-heart"></i> </button>
         </div>
-        <nav class="main-nav">
-            <div>
-                <ul>
-                    <li> Hombre </li>
-                    <li> Mujer </li>
-                    <li> Sale </li>
-                </ul>
-            </div>
-            <h1 class="title" > Productos destacados </h1>
+    </div> <br>
 
-            <div class="conteiner">
-                <div class="card">
-            
-                    <img src="../public/images/adidas-Forum-Low-Bad-Bunny-Back-to-School-1.jpg">
-                    <h2 Adidas forum Bad Bunny Back to school></h2>
-                    <p> $ PRECIO </p>
-                    <a href="Ver mas.."></a>
-                </div>
-            </div> 
-            
-            <div class="conteiner">
-                <div class="card">
-            
-                    <img src="../public/images/Adidas-Forum-84-Hi-White-Gold-Foil.jpg">
-                    <h2 Adidas forum White Gold Foil></h2>
-                    <p> $ PRECIO </p>
-                    <a href="Ver mas.."></a>
-                </div>
-            </div>
-            
-            <div class="conteiner">
-                <div class="card">
-            
-                    <img src="../public/images/adidas-NMD-R1-Core-Black-Lush-Red-2015-2017.jpg">
-                    <h2 Adidas forum Bad Bunny Black lush Red></h2>
-                    <p> $ PRECIO </p>
-                    <a href="Ver mas.."></a>
-                </div>
-            </div>
-            <div>
-
-                <i class="fa-solid fa-magnifying-glass"></i>
-                </i> <input class="barra-busqueda" type="text" placeholder="Buscar productos, marcas">
+    <div class="cajas-desplegables">
+        <div class="desplegableDescription">
+            <button class="botonDescription"> Descripcion </button>
+            <div class="textDescription">
+                <p> Las Adidas Yeezy 350 V2 Dazzling Blue recuerda al Yeezy 350 V2 Black Friday Pack de 2016. En lugar
+                    de
+                    presentar un patrón jaspeado y una raya lateral transparente, opta por una parte superior Primeknit
+                    negra sólida y una raya lateral azul con el texto "SPLY-350". En la base, una suela Boost apagada
+                    ofrece comodidad y apoyo.</p>
             </div>
         </div>
-        <div>
 
-            <i class="fa-solid fa-magnifying-glass"></i>
-            </i> <input class="barra-busqueda" type="text" placeholder="Buscar productos, marcas">
-        </div>
-            <div>
-                <a href="/productCar">
-                    <i class="fa-sharp fa-solid fa-cart-shopping"> </i>
-                </a>
 
-                <a href="/login">
-                    <i class="fa-regular fa-user"></i>
-                </a>
-
-                <a href="/register">
-                    <i class="fa-solid fa-user-plus"></i>
-                </a>
-            </div>
-
-        </nav>
-
-    </header>
-
+    </div> <br> <br>
 
     <footer>
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> SHOP </h4>
-
-            <div>
-                <a class="footer-info" href=""> Hombres </a>
-                <a class="footer-info" href=""> Mujeres </a>
-                <a class="footer-info" href=""> Sale </a>
-            </div>
-
-        </section>
-
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> ASISTENCIA </h4>
-
-            <div>
-                <a class="footer-info" href=""> Términos y condiciones </a>
-                <a class="footer-info" href=""> Defensa al consumidor </a>
-                <a class="footer-info" href=""> Guia de talles </a>
-                <a class="footer-info" href=""> Formas de pago </a>
-                <a class="footer-info" href=""> Cómo comprar </a>
-            </div>
-
-        </section>
-
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> NOSOTROS </h4>
-
-            <div>
-                <a class="footer-info" href=""> Acerca de SNKR BA </a>
-                <a class="footer-info" href=""> Trabaja con nosotros </a>
-                <a class="footer-info" href=""> Prensa </a>
-                <a class="footer-info" href=""> Informacion corporativa </a>
-            </div>
-
-        </section>
-
-        <section class="footer-section">
-
-            <h4 class="tittle-section"> CONTACTO </h4>
-
-            <div>
-                <a class="footer-info" href=""> Locales </a>
-                <a class="footer-info" href=""> atencionclientes@snkrba.com </a>
-
-                <div class="icons-footer">
-
-                    <a href=""> <i class="fa-brands fa-instagram"></i> </a>
-                    <a href=""> <i class="fa-brands fa-whatsapp"></i> </a>
-                    <a href=""> <i class="fa-brands fa-facebook-f"></i> </a>
-
+        <div class="cajas-desplegables">
+            <div class="desplegable">
+                <button class="boton">Asistencia</button>
+                <div class="links">
+                    <a href="#">Terminos y condiciones</a>
+                    <a href="#">Defesa del consumir</a>
+                    <a href="#">Guia de talles</a>
+                    <a href="#">Formas de pago</a>
+                    <a href="#">Como comprar</a>
                 </div>
-
             </div>
-
-        </section>
+            <div class="desplegable">
+                <button class="boton">Nosotros</button>
+                <div class="links">
+                    <a href="#">Acerca de SNKR BA</a>
+                    <a href="#">Trabaja con nosotros</a>
+                    <a href="#">Prensa</a>
+                    <a href="#">Informacion corporativa</a>
+                </div>
+            </div>
+            <div class="desplegable">
+                <button class="boton">Contacto</button>
+                <div class="links">
+                    <a href="#">Locales</a>
+                    <a href="#">Email</a>
+                </div>
+            </div>
+            <div class="desplegable-shop">
+                <button class="boton">Shop</button>
+                <div class="links">
+                    <a href="#">Productos</a>
+                    <a href="#">Marcas</a>
+                    <a href="#">Sale</a>
+                </div>
+            </div>
+        </div>
+        <div class="iconos">
+            <div class="caja1">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="caja2">
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="caja3">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
 
     </footer>
-
-</body>
