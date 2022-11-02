@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,10 @@
     <title>Sneakers BA</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/styles-cart.css"></head>
+    <link rel="stylesheet" href="/css/styles-cart.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
 <body>
     <header>
         <div class="promo-cuotas">
@@ -17,20 +21,26 @@
             <i class="fa fa-bars burger"></i>
         </div>
         <div class="logo">
-            <a href="/"><img id="snk-logo"src="/images/Logo1.png" alt="Logo Sneakers"></a>
+            <a href="/"><img id="snk-logo" src="/images/Logo1.png" alt="Logo Sneakers"></a>
         </div>
         <nav class="main-nav">
-                <ul class="site-nav">
-                    <a href="#"><li> Productos </li></a>
-                    <a href="#"><li> Marcas </li></a>
-                    <a href="#"><li> Sale </li></a>
-                </ul>
-                <ul class="user-nav">
-                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                    <li class="barra-busqueda"><input type="text" placeholder="Buscar productos, marcas"></li>
-                    <li><a href="/productCar"><i class="fa-sharp fa-solid fa-cart-shopping"> </i></a></li>
-                    <li><a href="/login"><i class="fa-regular fa-user"></i></a></li>
-                </ul>
+            <ul class="site-nav">
+                <a href="#">
+                    <li> Productos </li>
+                </a>
+                <a href="#">
+                    <li> Marcas </li>
+                </a>
+                <a href="#">
+                    <li> Sale </li>
+                </a>
+            </ul>
+            <ul class="user-nav">
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li class="barra-busqueda"><input type="text" placeholder="Buscar productos, marcas"></li>
+                <li><a href="/productCar"><i class="fa-sharp fa-solid fa-cart-shopping"> </i></a></li>
+                <li><a href="/login"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -50,10 +60,21 @@
                             <p class="productSize">Tamaño: 43 [UK 10]</p>
                             <div class="productPriceQtyCaret">
                                 <div class="productPrice">$ 28.790 </div>
-                                <div class="productQty">Cantidad: 1</div>
-                                <div><i class="fa-regular fa-square-caret-down"></i></div>
-                            </div> 
-                        </div>                      
+                                <div class="productQty">
+
+                                    <label> Cantidad </label>
+                                    <select class="selectQty" name="cantidad" id=""><i>class="fa-regular fa-square-caret-down"></i>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+                        </div>
                         <div class="itemActions">
                             <i class="fa-solid fa-xmark"></i>
                             <i class="fa-regular fa-heart"></i>
@@ -67,10 +88,19 @@
                             <p class="productSize">Tamaño: 43 [UK 10]</p>
                             <div class="productPriceQtyCaret">
                                 <div class="productPrice">$ 18.990 </div>
-                                <div class="productQty">Cantidad: 1</div>
-                                <div><i class="fa-regular fa-square-caret-down"></i></div>
-                            </div> 
-                        </div>                      
+                                <div class="productQty">
+                                    <label> Cantidad </label>
+                                    <select class="selectQty" name="cantidad" id=""><i>class="fa-regular fa-square-caret-down"></i>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
                         <div class="itemActions">
                             <i class="fa-solid fa-xmark"></i>
                             <i class="fa-regular fa-heart"></i>
@@ -81,7 +111,8 @@
             <div class="grupo2">
                 <!-- Código PROMOCIONAL -->
                 <form class="codPromocional" action="#" method="get">
-                    <input class="codPromocional" type="Código promocional" id="codigoProm" name="codigoProm" placeholder="Ingresa tu código de promoción" size="40">
+                    <input class="codPromocional" type="Código promocional" id="codigoProm" name="codigoProm"
+                        placeholder="Ingresa tu código de promoción" size="40">
                 </form>
                 <div class="orderSummary">
                     <h3>RESUMEN DEL PEDIDO</h3>
@@ -106,7 +137,7 @@
                 <div class="paymentOptions">
                     <div>
                         <h3 class="opcionesPago">OPCIONES DE PAGO</h3>
-                    </div>                    
+                    </div>
                     <div class="cardLogos">
                         <img class="logo" src="images/visa.png" alt="">
                         <img class="logo" src="images/master.png" alt="">
@@ -167,4 +198,5 @@
 
     </footer>
 </body>
+
 </html>

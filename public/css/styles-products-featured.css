@@ -41,6 +41,7 @@
 }
 
 .image-product {
+    width: 100%;
     border-bottom: solid 1px #000;
 }
 
@@ -131,3 +132,4 @@ p {
     flex-direction: row;
     justify-content: space-around;
 }
+

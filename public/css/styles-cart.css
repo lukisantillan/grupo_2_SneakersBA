@@ -10,172 +10,23 @@ body {
     background-color: var(--azul);
     margin: 5px;
 }
-/*----HEADER RUBEN----*/
 
-header {
-    background-color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 13vh;
+:root {
+    --rosa: #e94560;
+    --azul: #16213e;
+    --azul-claro: #0f3460;
+    --violeta: #533483;
 }
-
-header ul li {
-    list-style-type: none;
-
-}
-
-.promo-cuotas {
-    background-color: var(--azul);
-    text-align: center;
-    width: 100%;
-    padding: 5px;
-}
-
-header div.logo {
-   margin: auto;
-}
-
-#snk-logo {
-    width: 65px;
-}
-
-.burger-menu {
-    font-size: 30px;
-    margin: auto;
-
-}
-.burger-menu i {
-    padding: 15px;
-
-}
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    margin: auto;
-
-}
-
-.main-nav i {
-    font-size: 18px;
-    color: black;
-}
-
-.main-nav ul {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    margin-left: 20px;
-}
-
-.main-nav li {
-    margin: 0 5px;
-}
-
-.main-nav .site-nav {
-    display: none;
-}
-
-.barra-busqueda {
-    display: none;
-}
-
-.promo-cuotas h3 {
-    color: #fff;
-    font-size: 100%;
-    font-weight: lighter;
-}
-
-.site-nav a {
-    text-decoration: none;
-    color: black;
-}
-
-
-/*--- ACA TERMINA HEADER RUBEN ----*/
-
-/*--- FOOOTER RUBEN----*/
-
-.boton {
-    background-color: transparent;
-    color: black;
-    border: none;
-    padding: 16px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.links a {
-    text-decoration: none;
-    color: black;
-    display: block;
-    padding: 13px;
-}
-
-.links {
-    background-color: transparent;
-    width: 185px;
-    display: none;
-}
-
-.links a:hover {
-    background-color: #533483;
-}
-
-.desplegable:hover .links{
-    display: block;
-}
-
-.desplegable-shop {
-    display: none;
-}
-
-.caja1 {
-  
-    text-align: center;
-    margin: 5px;
-}
-
-.caja2{
-    text-align: center;
-    margin: 5px;
-}
-
-.caja3{
-    text-align: center;
-     margin: 5px;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    width: 100%;
-    flex-wrap: wrap;
-    align-self: flex-end;
-}
-
-.iconos i {
-    color: black;
-    font-size: 20px
-}
-
-.iconos {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 15px;
-
-}
-
-/*--- ACÁ TERMINA FOOOTER RUBEN----*/
 
 
 /*--- ACÁ COMIENZA MAIN DANIEL----*/
 .cartMain {
     display:flex;
     flex-direction: column;
+    background-color: white;
+    margin-top: 10px;  
+    padding: 10px; 
+    border-bottom: solid 1px black;
 }
 .cartMain .grupo1,.grupo2 {
     display: flex;
@@ -200,6 +51,8 @@ footer {
      flex-wrap: nowrap;
      align-items: flex-start;
      margin-top:30px;
+     border-top: solid 1px black;
+
  }
  
  .cartMain .itemImage {
@@ -218,6 +71,7 @@ footer {
  
  .cartMain .productPrice {
     font-weight: bold;
+    margin-right: 20px;
  }
  .cartMain .productPriceQtyCaret {
      display: flex;
@@ -246,19 +100,12 @@ footer {
     padding: 10px;
  }
  
- .cartMain .productName {    
- }
- 
- .cartMain .productDesc {
- }
- .cartMain .productQty {}
- 
+
  .cartMain .orderSummary {
     margin-left: 15px;
     margin-right: 15px;
  }
- .cartMain .orderDetail {
- }
+
  .cartMain .orderLine {
      display: flex;
      justify-content:space-between;
@@ -273,7 +120,7 @@ footer {
      width: 100%;
      height: 30px;
      text-align: center;
-     background-color: black;
+     background-color: var(--rosa);
      color: white;
      margin:15px 0px 15px 0px;
      border-radius: 8px;
@@ -281,6 +128,14 @@ footer {
  
  .cartMain .botonPagar:hover {
      cursor: pointer;
+ }
+
+ .selectQty{
+    width: 100%;
+    padding: 8px;
+    border: solid 2px var(--violeta);
+    border-radius: 5px;
+    text-align: center;
  }
  
 
@@ -306,11 +161,17 @@ footer {
         order:1;
         height: 30px;
         text-align: center;
-        background-color: black;
+        background-color: var(--rosa);
         color: white;
         margin: 15px 0px 15px 0px;
         border-radius: 8px;
+        transition: 700ms;
     }
+
+    .botonPagar:hover{
+        background-color: black;
+    }
+
     .cartMain  .orderSummary {
         order:2;
      }
