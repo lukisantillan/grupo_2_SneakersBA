@@ -4,7 +4,10 @@ const path = require('path');
 const app = express();
 
 const publicPath = path.resolve('public');
+
 app.use(express.static(publicPath));
+
+app.set('view engine', 'ejs');
 
 const APP_PORT = 3000
 app.listen(APP_PORT, () => {
