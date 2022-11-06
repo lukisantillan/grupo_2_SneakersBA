@@ -7,6 +7,7 @@ const publicPath = path.resolve('public');
 
 app.use(express.static(publicPath));
 
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 const APP_PORT = 3000
@@ -14,28 +15,16 @@ app.listen(APP_PORT, () => {
     console.log('Servidor corriendo en puerto ' + APP_PORT);
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve('views/index.html'));
-});
+var indexRouter = require('./routes/index')
+var loginRouter = require('./routes/login')
+var productCartRouter = require('./routes/productCart')
+var productDetailRouter = require('./routes/productDetail')
+var registerRouter = require('./routes/register')
 
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/register.html'));
-});
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/login.html'))
-});
+app.use ('/',indexRouter);
+app.use ('/login',loginRouter);
+app.use ('/productCart',productCartRouter);
+app.use ('/productDetail',productDetailRouter);
+app.use ('/register',registerRouter);
 
-app.post('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/home.html'))
-});
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/login.html'));
-});
 
-app.get('/productCar', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/productCart.html'))
-});
-
-app.get('/productDetail', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/productDetail.html'))
-});
