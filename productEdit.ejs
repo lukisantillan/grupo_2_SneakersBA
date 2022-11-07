@@ -1,0 +1,83 @@
+<%- include('partials/metadata') %>
+<link rel="stylesheet" href="/css/styles-createProduct.css">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+   <%- include('partials/header') %>
+   <main class="main-container">
+    <main class="main-container-admin">
+        <section>
+           <form action="" method="POST"   class="admin-container">
+            <!-- ----TÍTULO----  -->
+               <div class="admin-title">
+                    <h1 class="admin-h1">EDITAR PRODUCTO</h1>
+               </div>
+           
+           <div class=container-left>
+            <!-- ----NOMBRE ----  -->   
+               <div class="form-nombre">
+                  <label for="">Nombre del producto</label></br>
+                    <input value="" type="Text" name="name" placeholder="Ingresá nombre del producto" required>
+               </div>
+            
+            <!-- ----CATEGORÍA----  -->
+             
+            <div class="form-categorias">
+                <label for="">Categoría:</label></br>
+                <select class="textarea-input" id="categoria-create" name="category">
+                   <option value="" selected disabled hidden>Elegí una opción</option>
+                     <option class="textarea-input" value="1">Hombre</option>
+                     <option class="textarea-input" value="2">Mujer</option>
+                </select>
+           </div>
+        
+        <!-- ----foto----  -->
+            
+            <div class="form-imagen" class="create-input-photo">
+                <label class="label-foto-admin">Foto del producto</label>
+                <br>
+                <input type="file" name="image">
+            </div>
+   
+           </div>
+           <div class="">
+             
+              <!-- ----DESCRIPCIÓN----  -->
+              <div class="admin-cajas-input">
+                   <label for="">Descripción</label></br>
+                   <textarea name="description" class="textarea-input" id="description" rows="4" cols="38"></textarea>
+              </div>
+           
+              <!-- ----Talle----  -->
+           
+            <div class="form-talle">
+                <label for="">Talle</label></br>
+                <select class="textarea-input" id="talle-create" name="talle">
+                    <option value="" selected disabled hidden>Elegí una opción</option>
+                        <option class="textarea-input" value="1">40</option>
+                        <option class="textarea-input" value="3">41</option>
+                        <option class="textarea-input" value="1">42</option>
+                        <option class="textarea-input" value="3">43</option>
+                </select>
+            </div>       
+
+                   <!------PRECIO----  -->
+                   <div class="form-precio">
+                   <label for="">Precio</label></br>
+                   <input  value="" type="number" name="price" placeholder="Precio" required>
+                   </div>
+            </div>
+
+            
+              <!-- ----BOTÓN "GUARDAR"----  -->
+              <button type="submit" class="boton-guardar">EDITAR</button>
+   
+           </form>
+   
+        </section>   
+    </main>
+           <%- include('partials/footer') %>
+</body>
+
+</html>
