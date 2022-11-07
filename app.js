@@ -21,6 +21,7 @@ var productCartRouter = require('./routes/productCart')
 var productDetailRouter = require('./routes/productDetail')
 var registerRouter = require('./routes/register')
 var productCreateRouter = require('./routes/productCreate')
+var productEditRouter = require('./routes/productEdit')
 
 app.use ('/',indexRouter);
 app.use ('/login',loginRouter);
@@ -28,4 +29,5 @@ app.use ('/productCart',productCartRouter);
 app.use ('/productDetail',productDetailRouter);
 app.use ('/register',registerRouter);
 app.use ('/productCreate',productCreateRouter);
+app.use ('/productEdit',productEditRouter);
 
