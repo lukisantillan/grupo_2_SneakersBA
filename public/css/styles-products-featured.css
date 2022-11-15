@@ -133,3 +133,9 @@ p {
     justify-content: space-around;
 }
 
+@media (min-width:1280px) {
+    .image-product{
+        width: 40%;
+    }
+}
+
