@@ -122,6 +122,13 @@ article .main-article{
     position: relative;
 }
 
+a{
+    text-decoration: none;
+}
+
+.description {
+    color: black;
+}
 .products {
     display: flex;
     flex-direction: column;
