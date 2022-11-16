@@ -1,0 +1,17 @@
+<%- include('partials/metadata') %>
+<link rel="stylesheet" href="/css/styles-products.css">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <main>
+        <% productsUrbanos.forEach(productUrbano => { %>
+         <img src="\images\<%= productUrbano.image  %> " alt="">
+        <% }) %>              
+    </main>
+    
+</body>
+
+<%- include('partials/footer') %>

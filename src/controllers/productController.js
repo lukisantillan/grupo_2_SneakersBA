@@ -20,6 +20,12 @@ const product = {
 		let resultado = products.find(product => product.id == req.params.id)
         res.render('productDetail', {'resultado' : resultado})
 	},
+    index: (req, res) => {
+        const productsUrbanos = products.filter((product) => product.category =='Urbana')
+        const productsDeportivos = products.filter((product) => product.category == 'Deportiva')
+        //Devolver datos a vista
+        return res.render('products', {productsUrbanos, productsDeportivos})
+        }
 };
 
 

@@ -1,24 +1,26 @@
-    <%- include('partials/metadata') %>
-     <link rel="stylesheet" href="/css/styles-products-featured.css">
-     <link rel="stylesheet" href="/css/styles.css">
+<%- include('partials/metadata') %>
+    <link rel="stylesheet" href="/css/styles-products-featured.css">
+    <link rel="stylesheet" href="/css/styles.css">
     </head>
 
     <body>
 
 
         <%- include('partials/header') %> <br> <br>
-        
+
             <main>
                 <div id="caja-detail">
 
                     <div class="images-product">
-                        <img class="image-product" src="/images/<%= resultado.image %>"
-                            alt="Adidas Yeezy">
+                        <img class="image-product" src="/images/<%= resultado.image %>" alt="Adidas Yeezy">
                     </div>
 
                     <div class="information-product">
-                        <h3 class="titulo-product"> <%= resultado.name %> </h3>
-                        <h5 class="price-product">$<%= resultado.price %></h5>
+                        <h3 class="titulo-product">
+                            <%= resultado.name %>
+                        </h3>
+                        <h5 class="price-product">$<%= resultado.price %>
+                        </h5>
                         <p> Talle </p>
                         <select class="select-talles" name="talle">
 
@@ -40,20 +42,20 @@
                             </button>
                             <button class="likeProduct"> <i class="fa-solid fa-heart"></i> </button>
                         </div>
-                    </div> <br>
-
-                    <div class="cajas-desplegables">
-                        <div class="desplegableDescription">
-                            <button class="botonDescription"> Descripcion </button>
-                            <div class="textDescription">
-                                <p> <%= resultado.description %> </p>
-                            </div>
+                    </div> <br> <br> <br>
+                </div>
+                <div class="cajas-desplegables">
+                    <div class="desplegableDescription">
+                        <button class="botonDescription"> Descripcion </button>
+                        <div class="textDescription">
+                            <p>
+                                <%= resultado.description %>
+                            </p>
                         </div>
-
-
-                    </div> <br> <br>
+                    </div>
+                </div>
             </main>
-            <%- include('partials/footer')  %> 
+            <%- include('partials/footer') %>
     </body>
 
     </html>

@@ -40,6 +40,11 @@
     background-color: #fff;
 }
 
+.cajas-desplegables{
+    background: white;
+}
+
+
 .image-product {
     width: 100%;
     border-bottom: solid 1px #000;
@@ -103,6 +108,7 @@ p {
 .desplegableDescription{
     border-top: solid 1px #000;
     border-bottom: solid 1px #000;
+    background: white;
 }
 .desplegableDescription:hover .textDescription{
     display: inline;
@@ -121,7 +127,7 @@ p {
 }
 
 .textDescription {
-    background-color: transparent;
+    background-color: white;
     width: 185px;
     display: none;
 }
@@ -135,7 +141,34 @@ p {
 
 @media (min-width:1280px) {
     .image-product{
-        width: 40%;
+        width: 80%;
+        border-bottom: none;
     }
+    #caja-detail{
+        display: flex;
+        flex-direction: row ;
+        justify-content: center
+    }
+
+    .information-product{
+        flex-direction: row;
+    }
+
+    .textDescription{
+        background-color: #fff;
+    }
+    .titulo-product {
+        font-size: 44px;
+        margin-top: 24%;
+    }
+
+    .buttons-product{
+        margin-bottom: 20px;
+    }
+
+    .price-product{
+        margin: 35px 10px;
+    }
+    
 }
 

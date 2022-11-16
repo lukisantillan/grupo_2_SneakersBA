@@ -22,5 +22,5 @@ const userRoute = require('./routes/userRoute')
 
 
 app.use('/',indexRouter);
-app.use('/product', productRoute);
+app.use('/products', productRoute);
 app.use('/user', userRoute);
