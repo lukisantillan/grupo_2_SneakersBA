@@ -8,7 +8,7 @@
    <main class="main-container">
     <section>
     
-       <form class="admin-container"   method="POST" action="/products/create" >
+       <form class="admin-container"   method="POST" action="/products" enctype="multipart/form-data" >
 
             <!-- ----TÍTULO----  -->
            <div>
@@ -19,17 +19,23 @@
        <div class="">
            <!-- ----NOMBRE ----  -->
            <div class="form-nombre">
-                <label for="">Nombre del producto</label></br>
-                <input type="text" name="name" placeholder="Ingresá nombre del producto" class="nombre-producto-create">
+                <label for="name">Nombre del producto</label></br>
+                <input type="text" name="name" id="name" placeholder="Ingresá nombre del producto" class="nombre-producto-create">
            </div>
+          
+           <!-- ----PRECIO----  -->
+             <div class="form-precio">
+               <label for="price">Precio</label></br>
+               <input type="number" name="price" id="price" placeholder="Ingresá un precio" class="precio-product-create">
+                </div>
 
            <!-- ----CATEGORÍA----  -->
            <div class="form-categorias">
-                <label for="">Categoría:</label></br>
+                <label for="category">Categoría:</label></br>
                 <select class="textarea-input" id="categoria-create" name="category">
                    <option value="" selected disabled hidden>Elegí una opción</option>
-                     <option class="textarea-input" value="1">Hombre</option>
-                     <option class="textarea-input" value="2">Mujer</option>
+                     <option class="textarea-input" value="1">Urbana</option>
+                     <option class="textarea-input" value="2">Deportiva</option>
                 </select>
            </div>
 
@@ -37,36 +43,17 @@
            <div class="form-imagen" class="create-input-photo">
                <label>Foto del producto</label>
                <br>
-               <input type="file" name="image" class="imagen-product-create">
+               <input type="file" name="image" id="image" class="imagen-product-create">
           </div>
 
        </div>
-
-
-       <div class="">
+           <div class="">
                <!-- ----DESCRIPCIÓN----  -->
                <div class="form-descipcion">
                <label for="">Descripción</label></br>
                <textarea name="description"  class="textarea-input" id="description" rows="4" cols="38" placeholder="Agregá una descripción"></textarea> 
                </div>
-
-               <!-- ----Talle----  -->
-               <div class="form-talle">
-               <label for="">Talle</label></br>
-               <select class="textarea-input" id="categoria-create" name="category">
-                <option value="" selected disabled hidden>Elegí una opción</option>
-                  <option class="textarea-input" value="1">40</option>
-                  <option class="textarea-input" value="3">41</option>
-                  <option class="textarea-input" value="1">42</option>
-                  <option class="textarea-input" value="3">43</option>
-             </select>
-               </div>
-         
-               <!-- ----PRECIO----  -->
-               <div class="form-precio">
-              <label for="">Precio</label></br>
-              <input type="number" name="price" placeholder="Ingresá un precio" class="precio-product-create">
-               </div>
+        
         </div>
           <!-- ----BOTÓN "GUARDAR"----  -->
           <button type="submit" class="boton-guardar">Guardar</button>
