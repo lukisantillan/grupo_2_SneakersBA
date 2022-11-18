@@ -12,14 +12,14 @@
                 <div id="caja-detail">
 
                     <div class="images-product">
-                        <img class="image-product" src="/images/<%= resultado.image %>" alt="Adidas Yeezy">
+                        <img class="image-product" src="/images/<%= productToFind.image %>" alt="Adidas Yeezy">
                     </div>
 
                     <div class="information-product">
                         <h3 class="titulo-product">
-                            <%= resultado.name %>
+                            <%= productToFind.name %>
                         </h3>
-                        <h5 class="price-product">$<%= resultado.price %>
+                        <h5 class="price-product">$<%= productToFind.price %>
                         </h5>
                         <p> Talle </p>
                         <select class="select-talles" name="talle">
@@ -49,7 +49,7 @@
                         <button class="botonDescription"> Descripcion </button>
                         <div class="textDescription">
                             <p>
-                                <%= resultado.description %>
+                                <%= productToFind.description %>
                             </p>
                         </div>
                     </div>
