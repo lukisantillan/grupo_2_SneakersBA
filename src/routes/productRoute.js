@@ -38,7 +38,7 @@ router.get("/detail/:productId/", productController.detail);
 
 /*EDITAR PRODUCTO*/
 router.get("/edit/:productId/", productController.edit);
-router.put("/:id", productController.update);
+router.put("/:productId", productController.update);
 
 /*BORRAR PRODUCTO/
 /*router.delete("/:id", productsController.destroy);*/

@@ -42,23 +42,19 @@ const product = {
         return res.render("productDetail", { 'productToFind' : productToFind})
       },
     edit: (req, res) => {
+      const productId = req.params.productId;
+      const productToFind = products.find((product) => product.id == productId);
 
-    const productId = req.params.productId;
-
-    const productToFind = products.find((product) => product.id == productId);
-
-    if (productToFind == undefined) {
+      if (productToFind == undefined) {
       return res.send("No existe el producto");
     }
-    return res.render("productEdit", {
-		productToEdit: productToFind,
-    });
+    return res.render("productEdit", {'productToFind': productToFind,});
   },
 
   update: (req, res) => {
     const dataToUpdate = req.body;
     dataToUpdate.price = Number(dataToUpdate.price);
-    dataToUpdate.discount = Number(dataToUpdate.discount);
+  
 
     const productIndex = products.findIndex(
       (product) => {
