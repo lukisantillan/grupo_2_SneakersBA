@@ -1,69 +1,81 @@
 <%- include('partials/metadata') %>
-<link rel="stylesheet" href="/css/styles-createProduct.css">
-<link rel="stylesheet" href="/css/styles.css">
-</head>
+     <link rel="stylesheet" href="/css/styles-createProduct.css">
+     <link rel="stylesheet" href="/css/styles.css">
+     </head>
 
-<body>
-    <%- include('partials/header') %>
-    <main class="main-container">
-     <section>
-     
-          <form action="/products/<%=productToEdit.id %>?_method=PUT"  method="POST">
- 
-             <!-- ----TÍTULO----  -->
-            <div>
-                 <h1 class="titulo">CARGAR PRODUCTO </h1>
-            </div>
- 
- 
-        <div class="">
-            <!-- ----NOMBRE ----  -->
-            <div class="form-nombre">
-                 <label for="name">Nombre del producto</label></br>
-                 <input type="text" name="name" id="name" value="<%= productToEdit.name %>" class="nombre-producto-create" placeholder="EJ: Nike Jordan">
-              
-            </div>
-           
-            <!-- ----PRECIO----  -->
-              <div class="form-precio">
-                <label for="price">Precio</label></br>
-                <input type="text" name="price" id="price" value="<%= productToEdit.price %>" class="precio-product-create">
-                 </div>
- 
-            <!-- ----CATEGORÍA----  -->
-            <div class="form-categorias">
-                 <label for="category">Categoría:</label></br>
-                 <select class="textarea-input" id="categoria-create" name="category">
-                    <option value="" selected disabled hidden>Elegí una opción</option>
-                      <option class="textarea-input" 
-                      <% if (productToEdit.category=='Urbana' ) { %>
-                         selected
-                         <% } %>
-                      value="Urbana">Urbana</option>
-                      <option class="textarea-input" 
-                      <% if (productToEdit.category=='Deportiva' ) { %>
-                         selected
-                         <% } %>value="Deportiva">Deportiva</option>
-                 </select>
-            </div>
- 
- 
-        </div>
-            <div class="">
-                <!-- ----DESCRIPCIÓN----  -->
-                <div class="form-descipcion">
-                <label for="">Descripción</label></br>
-                <textarea name="description"  class="textarea-input"><%= productToEdit.description %> ></textarea> 
-                </div>
-         
-         </div>
-           <!-- ----BOTÓN "GUARDAR"----  -->
-           <button type="submit" class="boton-guardar">Editar</button>
-        </form>
- 
-     </section>   
-    </main>
-            <%- include('partials/footer') %>
- </body>
+     <body>
+          <%- include('partials/header') %>
+               <main class="main-container">
+                    <section>
+                         <div class="contenido">
 
-</html>
+                              <form class="form-padre" action="/products/<%=productToEdit.id %>?_method=PUT"
+                                   method="POST">
+                                   <div class="form-hijo">
+                                        <!-- ----TÍTULO----  -->
+                                        <div>
+                                             <h1 class="titulo">CARGAR PRODUCTO </h1>
+                                        </div>
+
+
+                                        <div class="grupo">
+                                             <!-- ----NOMBRE ----  -->
+                                             <div class="form-nombre">
+                                                  <label for="name">Nombre del producto</label></br></br>
+                                                  <input type="text" name="name" id="name"
+                                                       value="<%= productToEdit.name %>" class="nombre-producto-create"
+                                                       placeholder="EJ: Nike Jordan">
+
+                                             </div>
+
+                                             <!-- ----PRECIO----  -->
+                                             <div class="grupo">
+                                                  <label for="price">Precio</label></br></br>
+                                                  <input type="text" name="price" id="price"
+                                                       value="<%= productToEdit.price %>" class="precio-product-create">
+                                             </div>
+
+                                             <!-- ----CATEGORÍA----  -->
+                                             <div class="grupo">
+                                                  <label for="category">Categoría:</label></br></br>
+                                                  <select class="textarea-input" id="categoria-create" name="category">
+                                                       <option value="" selected disabled hidden>Elegí una opción
+                                                       </option>
+                                                       <option class="textarea-input" <% if
+                                                            (productToEdit.category=='Urbana' ) { %>
+                                                            selected
+                                                            <% } %>
+                                                                 value="Urbana">Urbana
+                                                       </option>
+                                                       <option class="textarea-input" <% if
+                                                            (productToEdit.category=='Deportiva' ) { %>
+                                                            selected
+                                                            <% } %>value="Deportiva">Deportiva
+                                                       </option>
+                                                  </select>
+                                             </div>
+
+
+                                        </div>
+                                        <div class="grupo">
+                                             <!-- ----DESCRIPCIÓN----  -->
+                                             <div class="form-descipcion">
+                                                  <label for="description">Descripción</label></br>
+                                                  <textarea name="description" id="description"
+                                                       class="textarea-input"><%= productToEdit.description %> >
+                                                  </textarea>
+                                             </div>
+
+                                        </div>
+                                        <!-- ----BOTÓN "GUARDAR"----  -->
+                                        <button type="submit" class="boton-guardar">Editar</button>
+                                   </div>
+                              </form>
+
+                         </div>
+                    </section>
+               </main>
+               <%- include('partials/footer') %>
+     </body>
+
+     </html>

@@ -42,3 +42,66 @@ button.boton-guardar {
     border: solid 2px orangered;
     color: var(--azul-claro);
   }
+
+  div.contenido {
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 35px;
+
+}
+
+form#form-padre {
+    background: #fff;
+    padding: 20px 0px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+
+}
+
+div.form-hijo {
+    width: 80%;
+    margin: auto;
+}
+
+div.form-hijo .grupo {
+    position: relative;
+    margin: 35px;
+
+}
+
+input#name, #price, #categoria-create, #description {
+    color: black;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #16213e
+}
+
+input#name:focus {
+    outline: none;
+    color: #5e5d5d
+}
+
+
+
+button {
+    font-family: 'helvetica';
+    background-color: #0f3460;
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    color: #fff;
+    height: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
