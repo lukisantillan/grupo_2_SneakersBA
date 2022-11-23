@@ -8,7 +8,7 @@
     <main class="main-container">
      <section>
      
-        <form class="admin-container"   method="POST" action="/products" enctype="multipart/form-data" >
+          <form action="/products/<%=productToEdit.id %>?_method=PUT"  method="POST">
  
              <!-- ----TÍTULO----  -->
             <div>
@@ -20,14 +20,14 @@
             <!-- ----NOMBRE ----  -->
             <div class="form-nombre">
                  <label for="name">Nombre del producto</label></br>
-                 <input type="text" name="name" id="name" placeholder="<%= productToFind.name %>" class="nombre-producto-create">
+                 <input type="text" name="name" id="name" value="<%= productToEdit.name %>" class="nombre-producto-create" placeholder="EJ: Nike Jordan">
               
             </div>
            
             <!-- ----PRECIO----  -->
               <div class="form-precio">
                 <label for="price">Precio</label></br>
-                <input type="number" name="price" id="price" placeholder="<%= productToFind.price %>" class="precio-product-create">
+                <input type="text" name="price" id="price" value="<%= productToEdit.price %>" class="precio-product-create">
                  </div>
  
             <!-- ----CATEGORÍA----  -->
@@ -35,24 +35,25 @@
                  <label for="category">Categoría:</label></br>
                  <select class="textarea-input" id="categoria-create" name="category">
                     <option value="" selected disabled hidden>Elegí una opción</option>
-                      <option class="textarea-input" value="Urbana">Urbana</option>
-                      <option class="textarea-input" value="Deportiva">Deportiva</option>
+                      <option class="textarea-input" 
+                      <% if (productToEdit.category=='Urbana' ) { %>
+                         selected
+                         <% } %>
+                      value="Urbana">Urbana</option>
+                      <option class="textarea-input" 
+                      <% if (productToEdit.category=='Deportiva' ) { %>
+                         selected
+                         <% } %>value="Deportiva">Deportiva</option>
                  </select>
             </div>
  
-            <!-- ----foto----  -->
-            <div class="form-imagen" class="create-input-photo">
-                <label>Foto del producto</label>
-                <br>
-                <input type="file" name="image" id="image" class="imagen-product-create">
-           </div>
  
         </div>
             <div class="">
                 <!-- ----DESCRIPCIÓN----  -->
                 <div class="form-descipcion">
                 <label for="">Descripción</label></br>
-                <textarea name="description"  class="textarea-input" id="description" rows="4" cols="38" placeholder="<%= productToFind.description %>"></textarea> 
+                <textarea name="description"  class="textarea-input"><%= productToEdit.description %> ></textarea> 
                 </div>
          
          </div>

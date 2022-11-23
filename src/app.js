@@ -1,11 +1,12 @@
 const express = require('express');
 const path = require('path');
+const methodOverride = require('method-override');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
 const app = express();
 
-const publicPath = path.resolve('./public');
 
-app.use(express.static(publicPath));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -19,8 +20,16 @@ const indexRouter = require('./routes/index')
 const productRoute =require('./routes/productRoute')
 const userRoute = require('./routes/userRoute')
 
+app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.urlencoded({ extended: false }));
+app.use(logger('dev'));
+app.use(express.json());
+app.use(cookieParser());
+app.use(methodOverride('_method'));
+
 
 
 app.use('/',indexRouter);
 app.use('/products', productRoute);
 app.use('/user', userRoute);
+app.use(methodOverride('_method')); 

@@ -21,6 +21,13 @@ const storage = multer.diskStorage({
   
   const upload = multer({ storage });
 
+  const { body } = require("express-validator");
+
+const validatorsMiddleware = [
+  body("name").notEmpty().withMessage('El campo no puede estar vacío'),
+  body("price").isNumeric()
+];
+
 /*VISTA TODOS LOS PRODUCTOS */
 
 router.get("/", productController.index);
@@ -38,7 +45,7 @@ router.get("/detail/:productId/", productController.detail);
 
 /*EDITAR PRODUCTO*/
 router.get("/edit/:productId/", productController.edit);
-router.put("/:productId", productController.update);
+router.put("/:id", productController.update);
 
 /*BORRAR PRODUCTO/
 /*router.delete("/:id", productsController.destroy);*/

@@ -3,8 +3,11 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 const { validationResult } = require('express-validator');
+
 
 const product = {
     cart: function (req, res, next) {
@@ -34,6 +37,7 @@ const product = {
   },
 
     detail: (req, res) => {
+        const product = console.log('hola');
         const productId = req.params.productId;
         const productToFind = products.find((product) => product.id == productId);
         if (productToFind == undefined) {
@@ -48,14 +52,16 @@ const product = {
       if (productToFind == undefined) {
       return res.send("No existe el producto");
     }
-    return res.render("productEdit", {'productToFind': productToFind,});
+    return res.render("productEdit", {productToEdit : productToFind,});
   },
 
   update: (req, res) => {
     const dataToUpdate = req.body;
-    dataToUpdate.price = Number(dataToUpdate.price);
-  
+    ;
 
+
+    // Obtener el indice del producto en el array productos
+    // products[0] = nuevo producto 
     const productIndex = products.findIndex(
       (product) => {
         return product.id == req.params.id
@@ -64,6 +70,8 @@ const product = {
     if (productIndex == -1) {
       return res.send('No existe el producto')
     }
+    // Actualizo array en base al indice
+    // Combinar producto existente con nuevos datos a actualizar
     products[productIndex] = {
       ...products[productIndex],
       ...dataToUpdate
