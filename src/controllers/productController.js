@@ -90,7 +90,14 @@ const product = {
             productsDeportivos,
         }
         return res.render('products', viewData)
-        }
+        },
+
+    //-- Delete---- //
+    destroy: (req, res) => {
+      res.send("PRODUCTO ELIMINADO"),
+      res.send('/products')
+      
+    },      
 };
 
 
