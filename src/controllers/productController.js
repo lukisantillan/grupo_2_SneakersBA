@@ -94,7 +94,6 @@ const product = {
 
     //-- Delete---- //
     destroy: (req, res) => {
-      res.send("PRODUCTO ELIMINADO"),
       res.send('/products')
       
     },      
