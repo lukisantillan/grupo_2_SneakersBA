@@ -94,8 +94,16 @@ const product = {
 
     //-- Delete---- //
     destroy: (req, res) => {
-      res.send('/products')
-      
+      const productId = req.params.productId;
+      const productDelete = products.filter((product) => product.id != productId);
+
+      if (productDelete == undefined) {
+      return res.send("No existe el producto");
+    }
+    fs.writeFileSync(productsFilePath, JSON.stringify(productDelete, null, 2));
+
+    return res.render("productEdit", {productToEdit : productDelete,});
+
     },      
 };
 
