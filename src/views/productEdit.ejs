@@ -14,7 +14,7 @@
                                    <div class="form-hijo">
                                         <!-- ----TÍTULO----  -->
                                         <div>
-                                             <h1 class="titulo">CARGAR PRODUCTO </h1>
+                                             <h1 class="titulo">EDITANDO <%=productToEdit.name %> </h1>
                                         </div>
 
 
@@ -68,11 +68,14 @@
 
                                         </div>
                                         <!-- ----BOTÓN "GUARDAR"----  -->
-                                        <button type="submit" class="boton-guardar">Editar</button>
+                                        <button type="submit" class="boton-guardar">EDITAR</button>
                                    </div>
                               </form>
-
+						
                          </div>
+                         <form action="/products/delete/<%=productToEdit.id %>?_method=DELETE" method="POST" >
+							<button type="submit" class="boton-guardar">ELIMINAR</button>
+						</form>
                     </section>
                </main>
                <%- include('partials/footer') %>

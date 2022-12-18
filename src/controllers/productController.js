@@ -90,7 +90,21 @@ const product = {
             productsDeportivos,
         }
         return res.render('products', viewData)
-        }
+        },
+
+    //-- Delete---- //
+    destroy: (req, res) => {
+      const productId = req.params.productId;
+      const productDelete = products.filter((product) => product.id != productId);
+
+      if (productDelete == undefined) {
+      return res.send("No existe el producto");
+    }
+    fs.writeFileSync(productsFilePath, JSON.stringify(productDelete, null, 2));
+
+    return res.render("productEdit", {productToEdit : productDelete,});
+
+    },      
 };
 
 

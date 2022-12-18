@@ -47,8 +47,8 @@ router.get("/detail/:productId/", productController.detail);
 router.get("/edit/:productId/", productController.edit);
 router.put("/:id", productController.update);
 
-/*BORRAR PRODUCTO/
-/*router.delete("/:id", productsController.destroy);*/
+/*BORRAR PRODUCTO*/
+router.delete("/delete/:productId", productController.destroy);
 
 router.get('/cart', productController.cart)
 
