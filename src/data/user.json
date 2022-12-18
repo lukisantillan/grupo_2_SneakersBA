@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "userName": "",
         "firstName": "ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
         "lastName": "vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel",
         "email": "wburns0@homestead.com",
@@ -10,6 +11,7 @@
     },
     {
         "id": 2,
+        "userName": "",
         "firstName": "nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec",
         "lastName": "magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus",
         "email": "rhastwall1@hhs.gov",
@@ -19,6 +21,7 @@
     },
     {
         "id": 3,
+        "userName": "",
         "firstName": "eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh",
         "lastName": "praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo",
         "email": "lismail2@oakley.com",
@@ -28,6 +31,7 @@
     },
     {
         "id": 4,
+        "userName": "",
         "firstName": "lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc",
         "lastName": "at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum",
         "email": "kstruan3@flavors.me",
@@ -37,6 +41,7 @@
     },
     {
         "id": 5,
+        "userName": "",
         "firstName": "lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla",
         "lastName": "vitae mattis nibh ligula nec sem duis aliquam convallis nunc",
         "email": "vbranwhite4@bbb.org",
@@ -46,6 +51,7 @@
     },
     {
         "id": 6,
+        "userName": "",
         "firstName": "pede lobortis ligula sit amet eleifend pede libero quis orci",
         "lastName": "mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit",
         "email": "gpankethman5@dyndns.org",
@@ -54,7 +60,8 @@
         "avatar": ""
     },
     {
-        "id": 7,
+        "id": 7, 
+        "userName": "",
         "firstName": "augue vel accumsan tellus nisi eu orci mauris lacinia sapien",
         "lastName": "vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit",
         "email": "tkeirl6@altervista.org",
@@ -64,6 +71,7 @@
     },
     {
         "id": 8,
+        "userName": "",
         "firstName": "porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius",
         "lastName": "orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu",
         "email": "cgrenville7@tinypic.com",
@@ -73,6 +81,7 @@
     },
     {
         "id": 9,
+        "userName": "",
         "firstName": "volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea",
         "lastName": "proin leo odio porttitor id consequat in consequat ut nulla sed",
         "email": "oyakushkev8@apple.com",
@@ -82,10 +91,21 @@
     },
     {
         "id": 10,
+        "userName": "",
         "firstName": "pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus",
         "lastName": "sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
         "email": "alouisot9@discovery.com",
         "password": "As9Ne43ILBB9",
+        "type": "Customer",
+        "avatar": ""
+    },
+    {
+        "id": 11,
+        "userName": "lukirepiola",
+        "firstName": "pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus",
+        "lastName": "sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
+        "email": "alouisot9@discovery.com",
+        "password": "LuketaMC12_",
         "type": "Customer",
         "avatar": ""
     }

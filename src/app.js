@@ -3,6 +3,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const session = require('express-session');
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
+app.use(session({secret: "Nuestro mensaje secreto"}));
 
 
 
