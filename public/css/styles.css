@@ -306,8 +306,16 @@ footer {
     text-align: center;
     color: #533483;
     padding: 5px;
+    background-color: white;
 }
 
+.bienvenida h3{
+    text-align: center;
+    font-size: 60px;
+    color: #533483;
+    margin-top: 15px;
+    background-color: white;
+}
 
 }
 

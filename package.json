@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/lukisantillan/grupo_2_SneakersBA#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
     "cookies-parser": "^1.2.0",
     "ejs": "^3.1.8",
