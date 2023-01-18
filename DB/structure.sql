@@ -1,6 +1,3 @@
-
-
-
 CREATE TABLE `brand` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(45) NOT NULL,
@@ -28,8 +25,8 @@ CREATE TABLE `orderdetails` (
   PRIMARY KEY (`Id`),
   KEY `OrderId` (`OrderId`),
   KEY `ProductId` (`ProductId`),
-  CONSTRAINT `OrderId` FOREIGN KEY (`OrderId`) REFERENCES `orders` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `ProductId` FOREIGN KEY (`ProductId`) REFERENCES `products` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `FK_orderdetails_order` FOREIGN KEY (`OrderId`) REFERENCES `orders` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `FK_orderdetails_products` FOREIGN KEY (`ProductId`) REFERENCES `products` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `orders` (
@@ -38,8 +35,8 @@ CREATE TABLE `orders` (
   `Amount` int(11) NOT NULL,
   `ShippingAdress` varchar(100) NOT NULL,
   PRIMARY KEY (`Id`),
-  KEY `UserId` (`UserId`),
-  CONSTRAINT `UserId` FOREIGN KEY (`UserId`) REFERENCES `users` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `FK_orders_users` (`UserId`),
+  CONSTRAINT `FK_orders_users` FOREIGN KEY (`UserId`) REFERENCES `users` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `products` (
@@ -57,9 +54,9 @@ CREATE TABLE `products` (
   KEY `CategoryId` (`CategoryId`),
   KEY `BrandId` (`BrandId`),
   KEY `ColourId` (`ColourId`),
-  CONSTRAINT `BrandId` FOREIGN KEY (`BrandId`) REFERENCES `brand` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `CategoryId` FOREIGN KEY (`CategoryId`) REFERENCES `categories` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `ColourId` FOREIGN KEY (`ColourId`) REFERENCES `colour` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `FK_products_brand` FOREIGN KEY (`BrandId`) REFERENCES `brand` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `FK_products_categories` FOREIGN KEY (`CategoryId`) REFERENCES `categories` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `FK_products_colour` FOREIGN KEY (`ColourId`) REFERENCES `colour` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `users` (
