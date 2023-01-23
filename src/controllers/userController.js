@@ -1,70 +1,101 @@
-const { validationResult } = require('express-validator');
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
+const bcrypt = require('bcryptjs');
+const multer = require('multer');
+const {
+  check,
+  validationResult,
+  body
+} = require('express-validator');
 
-const bcrypt = require('bcrypt')
 
-const usersFilePath = path.join(__dirname, '../data/user.json');
-const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require('../database/models/');
 
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const saultRounds = 10;
+const User = db.User;
+
 
 
 const userController = {
 
-    login: function (req, res,) {
-        res.render('login');
+    login: function(req,res){
+        res.render(path.resolve(__dirname, '../views/usuarios/login'));
     },
+    ingresar: (req, res) => {
+      
+      db.User.findAll()
+      .then((users) => {		
 
-    processLogin: function (req, res,) {
+        let errors = validationResult(req);
         
-    const loginData = req.body;
-    // Buscar al usuario en JSON mediante nombre de usuario 
-    const existentUser = usersJSON.find(user => user.userName == req.body.userName )
-    // Usuario con ese email no existe
-    if (!existentUser) {
-        return res.send('No existe un usuario');
-    }
-    // Usuario si existe
-    // Comparar clave ingresada con clave en JSON
-    const isValidPassword =
-        bcrypt.compareSync(loginData.password, existentUser.password);
-
-        console.log(existentUser.password)
-        console.log(loginData.password)
-    
-    // Si el password no es válido
-    if (!isValidPassword) {
-        let passwordIncorrect = 'Contraseña Incorrecta'
-        return res.render('login', {passwordIncorrect : passwordIncorrect})
-    }
-
-    req.session.user = existentUser;
-
-    res.render('userViewLogin',{existentUser : existentUser} )
+        let usuarioLogueado = [];
         
+        if(req.body.email != '' && req.body.password != ''){
+          usuarioLogueado = users.filter(function (user) {
+            return user.email === req.body.email  
+          });
+
+          if(bcrypt.compareSync(req.body.password,usuarioLogueado[0].password)=== false){
+            usuarioLogueado = [];
+          }
+        }
+
+        if (usuarioLogueado.length === 0) {
+          return res.render(path.resolve(__dirname, '../views/usuarios/login'),{ errors: [{ msg: "Credenciales invalidas" }] });
+        } else {
+ 
+          req.session.usuario = usuarioLogueado[0];
+        }
+
+        if(req.body.recordarme){
+          res.cookie('email',usuarioLogueado[0].email,{maxAge: 1000 * 60 * 60 * 24})
+        }
+        return res.redirect('/');   
+
+      })
     },
 
-    register: function (req, res, next) {
-        res.render('register')
+    registro: function(req,res){
+      res.render(path.resolve(__dirname, '../views/usuarios/registro'));
     },
 
-    processRegister: function(req, res) {
-        let registerData = req.body;
-        registerData.password = bcrypt.hashSync(registerData.password, saultRounds)
+    create: (req, res) => {
 
-        const campoDeNuevoUsuario = req.body;
-        camposDeNuevoProducto.image = req.file.filename;
-        usersJSON.push(campoDeNuevoUsuario);
-    
-        fs.writeFileSync(usersFilePath, JSON.stringify(usersJSON, null, 2));
+      let errors = validationResult(req);
 
-        res.render('userView',{campoDeNuevoUsuario : campoDeNuevoUsuario} )
-    }
+      if(!errors.isEmpty()) {
+        return res.render(path.resolve(__dirname, '../views/usuarios/registro'), {
+          errors: errors.errors,  old: req.body
+        });
+      } 
 
 
-};
+      let user = {
+        firstName:req.body.first_name,
+        lastName: req.body.last_name,
+        email:req.body.email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        provincia: Number(req.body.provincia),
+        avatar: req.file ? req.file.filename : '',
+        role: 1
+      };
 
-module.exports = userController; 
+      User
+      .create(user)
+      .then((storedUser) => {
+          return  res.redirect('/login');
+      })
+      .catch(error => console.log(error));
+    },
+
+    logout: (req,res) =>{
+      req.session.destroy();
+      res.cookie('email',null,{maxAge: -1});
+      res.redirect('/')
+    },
+
+    cart: function(req,res){
+      res.render(path.resolve(__dirname, '../views/products/productCart'));
+}
+}
+module.exports = userController;

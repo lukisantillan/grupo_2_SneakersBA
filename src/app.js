@@ -1,43 +1,35 @@
 const express = require('express');
+const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
 const session = require('express-session');
+const cookies = require('cookie-parser');
+const acceso = require('./middlewares/acceso');
 
-const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware')
-
-const app = express();
-
-
-
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-const APP_PORT = 3000
-app.listen(APP_PORT, () => {
-    console.log('Servidor corriendo en puerto ' + APP_PORT);
-});
-
-const indexRouter = require('./routes/index')
-const productRoute =require('./routes/productRoute')
-const userRoute = require('./routes/userRoute')
-
-
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.resolve(__dirname, '..', 'public')));
+app.set('view engine','ejs');
 app.use(express.urlencoded({ extended: false }));
-app.use(logger('dev'));
-app.use(express.json());
-app.use(cookieParser());
 app.use(methodOverride('_method'));
-app.use(session({secret: "Nuestro mensaje secreto",
-resave: false,
-saveUninitialized: true,
+app.use(session({
+    secret : 'TopSecret',
+    resave : true,
+    saveUninitialized : true
 }));
-app.use(userLoggedMiddleware);
+app.use(cookies());
+app.use(acceso);
 
 
-app.use('/',indexRouter);
-app.use('/products', productRoute);
-app.use('/user', userRoute);
-app.use(methodOverride('_method')); 
+
+const webRoutes = require('./routes/web');
+const usuariosRoutes = require('./routes/usuariosRoutes');
+const productoRoutes = require('./routes/producto');
+const adminRoutes = require('./routes/admin');
+
+
+app.use(webRoutes);
+app.use(usuariosRoutes);
+app.use(productoRoutes);
+app.use(adminRoutes);
+
+
+app.listen(3000, 'localhost', ()=> console.log('Servidor corriendo en el puerto 3000'));

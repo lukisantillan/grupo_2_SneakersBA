@@ -15,22 +15,20 @@ module.exports = (sequelize,DataTypes) => {
         },    
         price: {
             type: DataTypes.DECIMAL,
-        },    
+        },       
         image: {
             type: DataTypes.STRING,
         },    
         categoryId: {
-            type: DataTypes.INTEGER,
-            allowNull: false
+            type: DataTypes.INTEGER
     },
     }
-    /*
+    
     let config ={
         tableName: 'products',
-        timestamps: true,
-        underscore: true
+        timestamps: false,
     }
-    */
+    
     const Product = sequelize.define(alias, cols);
     Product.associate = function(models){
         Product.belongsTo(models.Category, {

@@ -1,0 +1,33 @@
+<%- include('../partials/metadata') %>
+<link rel="stylesheet" href="/css/styles-products.css">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <main>
+        <!--Listado de nuestros productos-->
+        <section class="row">
+          <article class="col-12">
+          </article>
+          <% for(let i= 0; i < shoes.length; i++){ %>
+            <article class="col-12 col-md-6 col-lg-3 card p-2">
+              <figure >
+                <img  src="/images/shoes/<%= shoes[i].image%> " class="card-img-top w-100 d-block" alt="Reloj">
+              </figure>
+              <div class="card-body">
+                <h5 class="card-title"><%= shoes[i].name%></h5>
+                <h5 class="card-title" >$  <%= shoes[i].price%> </h5>
+                <p class="card-text descripcion"><%= shoes[i].description%> </p>
+                <a href="#" class="btn btn-primary">Ver detalle</a>
+              </div>
+            </article>
+          <% } %>      
+        </section>
+               
+    </main>
+    
+</body>
+
+<%- include('../partials/footer') %>

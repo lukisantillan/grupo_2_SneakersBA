@@ -1,39 +1,42 @@
-<%- include('partials/metadata') %>
+<%- include('../partials/metadata') %>
     <link rel="stylesheet" href="/css/styles-login-register.css">
     <link rel="stylesheet" href="/css/styles.css">
     </head>
 
     <body>
-        <%- include('partials/header') %>
+        <%- include('../partials/header') %>
             <main>
-                <% if (typeof errors !='undefined' ) { %>
-
-                    <p style="color: red"><ul>
-                        <% for (let i=0; i < errors.lenght; i++) { %>
-                            <li>
-                                <%= errors[i].msg %>
-                            </li>
-                            <% } %>
-                    </ul>
-                    <% } %></p>
+                <div>
+                    <ul id="errores"> </ul>
+                  </div>
 
 
                         <div class="contenido">
-                            <form method="POST" action="/user/login" id="form-padre">
+                            <form method="POST" action="/ingresar" id="form-padre">
                                 <div class="form-hijo">
 
                                     <h1> INICIA SESIÓN </h1>
 
                                     <div class="grupo">
-                                        <input type="text" name="userName" id="name" required minlength="5"><span
+                                        <input type="text" name="email" id="name" required minlength="5"><span
                                             class="barra"></span>
-                                        <label for=""> Nombre de usuari@: </label>
+                                        <label for=""> Email: </label>
+                                        <% if(typeof(errors) != 'undefined'){%>
+                                            <span class="text-danger">
+                                              <%= errors[0].msg %>
+                                            </span>
+                                         <%}%>
                                     </div>
 
                                     <div class="grupo">
                                         <input type="password" name="password" id="name" required minlength="8"><span
                                             class="barra"></span>
                                         <label for=""> Contraseña: </label>
+                                        <% if(typeof(errors) != 'undefined'){%>
+                                            <span class="text-danger">
+                                              <%= errors[0].msg %>
+                                            </span>
+                                         <%}%>
                                     </div>
                                     
                                     <label class="grupo">
@@ -50,7 +53,7 @@
 
                                     <div class="flex-media-query">
                                         <div>
-                                            <a href="/user/register" class="link-register">Regístrate</a>
+                                            <a href="/registro" class="link-register">Regístrate</a>
                                         </div>
 
                                         <div class="recuperar-contraseña">
@@ -62,7 +65,7 @@
 
                         </div>
             </main>
-            <%- include('partials/footer') %>
+            <%- include('../partials/footer') %>
     </body>
 
     </html>
