@@ -1,20 +1,20 @@
-<%- include('partials/metadata') %>
+<%- include('../partials/metadata') %>
      <link rel="stylesheet" href="/css/styles-createProduct.css">
      <link rel="stylesheet" href="/css/styles.css">
      </head>
 
      <body>
-          <%- include('partials/header') %>
+          <%- include('../partials/header') %>
                <main class="main-container">
                     <section>
                          <div class="contenido">
 
-                              <form class="form-padre" action="/products/<%=productToEdit.id %>?_method=PUT"
-                                   method="POST">
+                              <form class="form-padre" action="/administrar/edit/<%=shoeEditar.id %>?_method=PUT"
+                                   method="POST" enctype="multipart/form-data" > 
                                    <div class="form-hijo">
                                         <!-- ----TÍTULO----  -->
                                         <div>
-                                             <h1 class="titulo">EDITANDO <%=productToEdit.name %> </h1>
+                                             <h1 class="titulo">EDITANDO <%=shoeEditar.name %> </h1>
                                         </div>
 
 
@@ -22,8 +22,8 @@
                                              <!-- ----NOMBRE ----  -->
                                              <div class="form-nombre">
                                                   <label for="name">Nombre del producto</label></br></br>
-                                                  <input type="text" name="name" id="name"
-                                                       value="<%= productToEdit.name %>" class="nombre-producto-create"
+                                                  <input type="text" name="nombre" required="required"
+                                                       value="<%= shoeEditar.name %>" class="nombre-producto-create"
                                                        placeholder="EJ: Nike Jordan">
 
                                              </div>
@@ -31,41 +31,41 @@
                                              <!-- ----PRECIO----  -->
                                              <div class="grupo">
                                                   <label for="price">Precio</label></br></br>
-                                                  <input type="text" name="price" id="price"
-                                                       value="<%= productToEdit.price %>" class="precio-product-create">
+                                                  <input type="number" name="precio" required="required"
+                                                       value="<%= shoeEditar.price %>" class="precio-product-create">
                                              </div>
 
                                              <!-- ----CATEGORÍA----  -->
                                              <div class="grupo">
                                                   <label for="category">Categoría:</label></br></br>
-                                                  <select class="textarea-input" id="categoria-create" name="category">
-                                                       <option value="" selected disabled hidden>Elegí una opción
+                                                  <select class="textarea-input" id="categoria" name="categoria">
+                                                       <option value="<%=shoeEditar.category.id %>" selected hidden><%=shoeEditar.category.name %>
                                                        </option>
-                                                       <option class="textarea-input" <% if
-                                                            (productToEdit.category=='Urbana' ) { %>
-                                                            selected
-                                                            <% } %>
-                                                                 value="Urbana">Urbana
-                                                       </option>
-                                                       <option class="textarea-input" <% if
-                                                            (productToEdit.category=='Deportiva' ) { %>
-                                                            selected
-                                                            <% } %>value="Deportiva">Deportiva
-                                                       </option>
+                                                       <% categorias.forEach(categoria => { %>
+                                                            <option value="<%=categoria.id %>"><%=categoria.name %></option>
+                                                          <% }); %>
                                                   </select>
                                              </div>
 
 
                                         </div>
                                              <div class="grupo">
-                                                  <!- -----DESCRIPCIÓN---- -!>
+                                           <!-- ----DESCRIPCION----  -->
                                                   <div class="form-descipcion">
                                                        <label for="description">Descripción</label></br>
-                                                       <textarea name="description" id="description"
-                                                            class="textarea-input"><%= productToEdit.description %> >
+                                                       <textarea name="descripcion" required="required"
+                                                            class="textarea-input" value="<%= shoeEditar.description %>">
                                                        </textarea>
                                                   </div>
-                                             </div>          
+                                             </div>  
+                                             <!-- --- IMAGEN----  -->    
+                                              <div class="grupo">
+
+                                                  <input type="hidden"  name="oldImagen"  value="<%= shoeEditar.image%>">
+                                                   <input type="file" name="imagen" >
+                                                  <label class="custom-file-label" for="inputGroupFile01">Seleccione una imagen...</label>-->
+                                               </div>
+                                             </div>
                                         
                                         <!-- ----BOTÓN "GUARDAR"----  -->
                                         <button type="submit" class="boton-guardar">EDITAR</button>
@@ -73,12 +73,10 @@
                               </form>
 						
                          </div>
-                         <form action="/products/delete/<%=productToEdit.id %>?_method=DELETE" method="POST" >
-							<button type="submit" class="boton-guardar">ELIMINAR</button>
-						</form>
+                      
                     </section>
                </main>
-               <%- include('partials/footer') %>
+               <%- include('../partials/footer') %>
      </body>
 
      </html>

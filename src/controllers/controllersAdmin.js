@@ -19,7 +19,7 @@ module.exports = {
             include : [{association : 'category'}]
         })   
         .then(shoes =>{
-       
+            //return res.send(relojes);
             res.render(path.resolve(__dirname, '..', 'views', 'admin', 'administrar'),{shoes});
         })
         .catch(error => res.send(error))
@@ -27,7 +27,7 @@ module.exports = {
     create: (req, res) =>{
         Category.findAll()
         .then(categorias =>{
-            res.render(path.resolve(__dirname, '..','views','admin','create'), {categorias});
+            res.render(path.resolve(__dirname, '..','views','admin','productCreate'), {categorias});
         } )
         
     },
@@ -39,13 +39,12 @@ module.exports = {
             name : req.body.nombre,
             description: req.body.descripcion,
             price: req.body.precio,
-            discount: req.body.descuento,
             image : req.file.filename,
-            categoryId : req.body.categoria
+            categoryId : req.body.categoria,  
         }    
         //return res.send(_body);
         Product.create(_body)
-        .then(reloj =>{
+        .then(shoe =>{
             res.redirect('/administrar');
         })
         .catch(error => res.send(error))
@@ -55,7 +54,7 @@ module.exports = {
             include : [{association : 'category'}]
         })  
         .then(myShoe =>{
-            res.render(path.resolve(__dirname, '..','views','admin','detail'), {miShoe})
+            res.render(path.resolve(__dirname, '..','views','admin','productDetail'), {myShoe})
         })  
         .catch(error => res.send(error))
     },
@@ -76,7 +75,7 @@ module.exports = {
         Promise.all([productos,categorias])  
         .then( ([shoeEditar, categorias]) =>{
             //return res.send(categorias);
-            res.render(path.resolve(__dirname, '..','views','admin','edit'), {shoeEditar, categorias})
+            res.render(path.resolve(__dirname, '..','views','admin','productEdit'), {shoeEditar, categorias})
         })  
         .catch(error => res.send(error))        
     },
@@ -84,10 +83,9 @@ module.exports = {
         Product.update ({
                 name:req.body.nombre,
                 price: req.body.precio,
-                description : req.body.descripcion,
-                discount: req.body.descuento,
+                categoryId : req.body.categoria,
                 image: req.file ? req.file.filename : req.body.oldImagen,
-                categoryId : req.body.categoria
+                description : req.body.descripcion, 
             }, {
                 where: {
                     id:req.params.id

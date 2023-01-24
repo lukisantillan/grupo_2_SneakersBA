@@ -1,16 +1,16 @@
-<%- include('partials/metadata') %>
+<%- include('../partials/metadata') %>
      <link rel="stylesheet" href="/css/styles-createProduct.css">
      <link rel="stylesheet" href="/css/styles.css">
      </head>
 
      <body>
-          <%- include('partials/header') %>
+          <%- include('../partials/header') %>
                <main class="main-container">
 
                     <section>
                          <div class="contenido">
                               
-                              <form class="form-padre" method="POST" action="/products"
+                              <form class="form-padre" method="POST" action="/administrar/create"
                                    enctype="multipart/form-data">
                                    <div class="form-hijo"></div>
 
@@ -24,52 +24,52 @@
                                         <!-- ----NOMBRE ----  -->
                                         <div class="grupo">
                                              <label for="name">Nombre del producto</label></br></br>
-                                             <input type="text" name="name" id="name"
-                                                  placeholder="Ingresá nombre del producto"
-                                                  class="nombre-producto-create">
+                                             <input type="text" class="form-control" name="nombre" placeholder="Nombre del reloj" required="required" value="">
+                                        </div>
+                                        <div class="">
+                                             <!-- ----DESCRIPCIÓN----  -->
+                                             <div class="form-descipcion">
+                                                  <label for="">Descripción</label></br></br>
+                                                  <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required="required" value="">
+                                             </div>
+     
                                         </div>
 
                                         <!-- ----PRECIO----  -->
                                         <div class="grupo">
                                              <label for="price">Precio</label></br></br>
-                                             <input type="number" name="price" id="price"
-                                                  placeholder="Ingresá un precio" class="precio-product-create">
+                                             <input type="number" class="form-control" name="precio" placeholder="Ingresa el precio" required="required" value="">
+                                        </div>
+
+                                           <!-- ----foto----  -->
+                                           <div class="grupo" class="create-input-photo">
+                                             <label>Foto del producto</label>
+                                             <br>
+                                             <input type="file" name="imagen">
                                         </div>
 
                                         <!-- ----CATEGORÍA----  -->
                                         <div class="grupo">
                                              <label for="category">Categoría:</label></br></br>
-                                             <select class="textarea-input" id="categoria-create" name="category">
-                                                  <option value="" selected disabled hidden>Elegí una opción</option>
-                                                  <option class="textarea-input" value="Urbana">Urbana</option>
-                                                  <option class="textarea-input" value="Deportiva">Deportiva</option>
-                                             </select>
+                                             <select name="categoria" id="categoria" class="custom-select">
+                                                  <option value="#" selected disabled>Seleccione su categoría...</option>
+                                                  <% categorias.forEach(categoria => { %>
+                                                    <option value="<%=categoria.id %>"><%=categoria.name %></option>
+                                                  <% }); %>
+                                                </select>
                                         </div>
 
-                                        <!-- ----foto----  -->
-                                        <div class="grupo" class="create-input-photo">
-                                             <label>Foto del producto</label>
-                                             <br>
-                                             <input type="file" name="image" id="image" class="imagen-product-create">
-                                        </div>
+                                     
 
                                    </div>
-                                   <div class="">
-                                        <!-- ----DESCRIPCIÓN----  -->
-                                        <div class="form-descipcion">
-                                             <label for="">Descripción</label></br></br>
-                                             <textarea name="description" class="textarea-input" id="description"
-                                                  rows="4" cols="38" placeholder="Agregá una descripción"></textarea>
-                                        </div>
-
-                                   </div>
+                                 
                                    <!-- ----BOTÓN "GUARDAR"----  -->
                                    <button type="submit" class="boton-guardar">Guardar</button>
                               </form>
                          </div>
                     </section>
                </main>
-               <%- include('partials/footer') %>
+               <%- include('../partials/footer') %>
      </body>
 
      </html>
