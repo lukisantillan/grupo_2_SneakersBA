@@ -19,7 +19,7 @@ module.exports = {
             include : [{association : 'category'}]
         })   
         .then(shoes =>{
-            //return res.send(relojes);
+       
             res.render(path.resolve(__dirname, '..', 'views', 'admin', 'administrar'),{shoes});
         })
         .catch(error => res.send(error))
