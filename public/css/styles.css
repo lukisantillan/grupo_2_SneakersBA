@@ -35,6 +35,10 @@ header ul li {
 
 }
 
+header a{
+    font-size: 20px;
+}
+
 .promo-cuotas {
     background-color: var(--azul);
     text-align: center;
@@ -44,6 +48,22 @@ header ul li {
 
 header div.logo {
     margin: auto;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    
+}
+
+a.access{
+    margin: 2px;
+    padding: 12px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+
 }
 
 #snk-logo {
@@ -88,9 +108,6 @@ header div.logo {
     display: none;
 }
 
-.barra-busqueda {
-    display: none;
-}
 
 .promo-cuotas h3 {
     color: #fff;
