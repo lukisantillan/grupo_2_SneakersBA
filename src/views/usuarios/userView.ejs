@@ -1,0 +1,35 @@
+<%- include('partials/metadata') %>
+<link rel="stylesheet" href="/css/styles-index.css">
+<link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+        <%- include('partials/header') %>
+        <div class="bienvenida">
+            <h3> BIENVENID@ <%= usuarioLogueado.userName %>  <br> INDIQUE SU PREFERENCIA DE VISITA </h3>
+        </div>
+        <section class="main-products2">
+            <div class="products">
+                <article>
+                    <a href="/products">
+                        <img src="\images\productos.png" alt="productos" class="producto_img">
+                        <h3>PRODUCTOS</h3>
+                    </a>
+
+                </article>
+                <article>
+                    <img src="\images\marcas.png" alt="marcas" class="marcas_img">
+                    <h3>MARCAS</h3>
+                </article>
+                <article>
+                    <img src="\images\SALE.png" alt="sale" class="sale_img">
+                    <h3>SALES</h3>
+                </article>
+            </div>
+        </section>
+        
+
+            <%- include('partials/footer') %>
+    </body>
+
+    </html>

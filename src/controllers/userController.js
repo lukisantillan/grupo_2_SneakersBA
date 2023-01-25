@@ -47,7 +47,7 @@ const userController = {
           req.session.usuario = usuarioLogueado[0];
         }
 
-        if(req.body.recordarme){
+        if(req.body.remember){
           res.cookie('email',usuarioLogueado[0].email,{maxAge: 1000 * 60 * 60 * 24})
         }
         return res.redirect('/');   
@@ -75,7 +75,6 @@ const userController = {
         lastName: req.body.last_name,
         email:req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
-        provincia: Number(req.body.provincia),
         avatar: req.file ? req.file.filename : '',
         role: 1
       };

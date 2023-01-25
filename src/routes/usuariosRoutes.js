@@ -27,7 +27,7 @@ const userController = require(path.resolve(__dirname, '../controllers/userContr
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '../../public/images/usuarios'));    
+      cb(null, path.resolve(__dirname, '../../public/images/avatars'));    
     },
     filename: function (req, file, cb) {
       cb(null, 'foto' + '-' + Date.now()+ path.extname(file.originalname)); 
@@ -36,9 +36,12 @@ const storage = multer.diskStorage({
    
 const upload= multer({ storage })
 
+/* Metodos !! */
 
 router.get('/cart' ,userController.cart);
+
 router.get('/login',userController.login);
+
 router.post('/ingresar', [
     check('email').isEmail().withMessage('Email invalido'),
     check('password').isLength({ min: 6 }).withMessage('La contraseña debe tener al menos 6 caracteres'),

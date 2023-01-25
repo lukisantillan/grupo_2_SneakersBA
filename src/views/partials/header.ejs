@@ -9,7 +9,34 @@
         <a href="/"><img id="snk-logo"src="/images/Logo1.png" alt="Logo Sneakers"></a>
     </div>
     <nav class="main-nav">
-            <ul class="site-nav">
+    </ul>
+    <ul class="my-2 my-lg-0 navbar-nav">
+    <% if(locals.usuario) { %> 
+            <!--Aquí dispongo  el acceso sólo al o los usuarios administradores-->
+      <% if(locals.usuario.role===9) { %>
+        <li class="nav-item">
+            <a class="nav-link" href="/administrar">Administrar</a>
+        </li>
+      <%}%>  
+
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Cerrar sesión<ion-icon name="log-out-outline"></ion-icon></a>
+      </li>
+      <li class="nav-item">
+        <img src="/images/usuarios/<%=locals.usuario.avatar %>"    width = '30' style= 'border-radius: 100%;'alt="">
+      </li>
+    <% } else { %>  
+
+      <!--Cuando no estoy logueado debería ver esto-->
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Iniciar sesión</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/registro">Registro</a>
+      </li>
+    <%}%>  
+    </ul>
+     <!--       </nav><ul class="site-nav">
                 <a href="/productos"><li> Productos </li></a>
                 <a href="#"><li> Marcas </li></a>
                 <a href="#"><li> Sale </li></a>
@@ -19,6 +46,6 @@
                 <li class="barra-busqueda"><input type="text" placeholder="Buscar productos, marcas"></li>
                 <li><a href="/cart"><i class="fa-sharp fa-solid fa-cart-shopping"> </i></a></li>
                 <li><a href="/login"><i class="fa-regular fa-user"></i></a></li>
-            </ul>
+            </ul>-->
     </nav>
 </header>
