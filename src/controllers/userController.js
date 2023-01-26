@@ -13,6 +13,7 @@ const db = require('../database/models/');
 
 
 const User = db.User;
+const Product = db.Product;
 
 
 
@@ -95,6 +96,15 @@ const userController = {
 
     cart: function(req,res){
       res.render(path.resolve(__dirname, '../views/products/productCart'));
-}
+},
+   show: (req,res)=>{
+      Product.findByPk(req.params.id, {
+          include : [{association : 'category'}]
+      })  
+      .then(myShoe =>{
+          res.render(path.resolve(__dirname, '..','views','admin','productDetail'), {myShoe})
+      })  
+      .catch(error => res.send(error))
+  },
 }
 module.exports = userController;
