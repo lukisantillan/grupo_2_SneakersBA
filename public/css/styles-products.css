@@ -56,7 +56,7 @@ a {
 }
 
 .detail-product {
-  color: color: var(var(--violeta));
+  color: var(var(--violeta));
   text-align: center;
   margin-top: 25px;
   margin-bottom: 15px;
