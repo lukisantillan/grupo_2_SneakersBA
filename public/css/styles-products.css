@@ -50,12 +50,17 @@ a {
   font-size: 20px;
 }
 
+
 @media (min-width: 550px) {
   #div-products {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .box-son {
+    box-shadow: 13px 0px 14px 0px rgb(100,100,100);
   }
 
   .product-box {
