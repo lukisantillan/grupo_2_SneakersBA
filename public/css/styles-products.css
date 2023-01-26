@@ -49,7 +49,19 @@ a {
   margin-bottom: 15px;
   font-size: 20px;
 }
+.product-box_data {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.detail-product {
+  color: color: var(var(--violeta));
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
 
 @media (min-width: 550px) {
   #div-products {

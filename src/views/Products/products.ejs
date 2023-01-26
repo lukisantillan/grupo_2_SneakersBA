@@ -11,16 +11,18 @@
         <section id='div-products'>
           <% for(let i= 0; i < shoes.length; i++){ %>
             <article class="product-box">
-              <div class="box-son">
-                <figure class="product-box-image" >
-                  <img  src="/images/shoes/<%= shoes[i].image%> " class="image" alt="Reloj">
+              <div  class="box-son">
+                <figure class="product-box-image">
+                  <img  src="/images/shoes/<%= shoes[i].image%> " class="image" alt="Reloj" >
                 </figure>
               <div class="product-box_data">
-                <h5 class="name-product"><%= shoes[i].name%></h5>
+                <h5 class="name-product" ><%= shoes[i].name%></h5>
                 <h5 class="price-product" >$  <%= shoes[i].price%> </h5>
+                <a href="/productos/detail/<%= shoes[i].id%>" class="detail-product">Detalle</a>
               </div>
             </div>
             </article>
+         
           <% } %>      
         </section>
                
