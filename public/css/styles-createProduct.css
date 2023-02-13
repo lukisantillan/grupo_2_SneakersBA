@@ -10,6 +10,12 @@
     margin: 10px;
 }
 
+.data-products{
+    display: flex;
+    justify-content: center;
+
+}
+
 .titulo{
     font-size: 30px;
     color: var(--rosa);
@@ -36,14 +42,14 @@ button.boton-guardar {
     border: solid 1px black;
     box-shadow: none;
     background-color: var(--rosa);
-  }
+}
   
-  button.boton-guardar:hover {
+button.boton-guardar:hover {
     border: solid 2px orangered;
     color: var(--azul-claro);
-  }
+}
 
-  div.contenido {
+div.contenido {
     height: 650px;
     display: flex;
     justify-content: center;
@@ -68,6 +74,7 @@ form#form-padre {
 div.form-hijo {
     width: 80%;
     margin: auto;
+    justify-content: center;
 }
 
 div.form-hijo .grupo {
@@ -104,4 +111,12 @@ button {
     height: 25px;
     font-size: 16px;
     cursor: pointer;
+}
+
+
+section{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
 }
