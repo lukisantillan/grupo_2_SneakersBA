@@ -8,7 +8,7 @@ const storage = multer.diskStorage({
       cb(null, path.resolve(__dirname, '..','..','public','images','shoes'));
     },
     filename: function (req, file, cb) {
-      cb(null, 'reloj-'+Date.now() + path.extname(file.originalname));
+      cb(null, 'shoe-'+Date.now() + path.extname(file.originalname));
     }
   });const upload = multer({ storage });const controllersAdmin = require(path.resolve(__dirname, '..', 'controllers', 'controllersAdmin'));router.get('/administrar', mantenimiento, controllersAdmin.index);
 router.get('/administrar/search_results', controllersAdmin.search);

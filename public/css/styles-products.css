@@ -49,6 +49,19 @@ a {
   margin-bottom: 15px;
   font-size: 20px;
 }
+.product-box_data {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.detail-product {
+  color: var(var(--violeta));
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
 
 @media (min-width: 550px) {
   #div-products {
@@ -56,6 +69,10 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .box-son {
+    box-shadow: 13px 0px 14px 0px rgb(100,100,100);
   }
 
   .product-box {
