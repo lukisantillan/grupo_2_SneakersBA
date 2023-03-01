@@ -3,6 +3,7 @@
   <%- include('../partials/header.ejs') %>    
   <%- include('../partials/metadata') %>
      <link rel="stylesheet" href="/css/styles.css">
+     <link rel="stylesheet" href="/css/styles-products.css">
 <body>
     <main class="container-fluid">
 
@@ -10,13 +11,13 @@
         <article>
           <h2 class="admin-title">Administrador de Productos</h2>
         </article>
-        <article >
-          <a class="btn btn-primary" href="/administrar/create">Agregar <ion-icon name="add-circle-outline"></ion-icon></a>          
+        <article class= "create-botom" >
+          <a class="btn btn-primary" href="/administrar/create">Agregar <ion-icon name="add-circle-outline" style="color: black"></ion-icon></a>          
         </article>
-        <article >
+        <article class= "search-results" >
           <form action="/administrar/search_results" method="GET">
             <input type="search" name="search">
-            <button class="btn btn-primary" type="submit"><ion-icon name="search-outline"></ion-icon></button>
+            <button class="btn btn-primary" type="submit"><ion-icon name="search-outline" style="color: black"></ion-icon></button>
           </form>
         </article>
         <article class="admin-class" >        <table class="table">

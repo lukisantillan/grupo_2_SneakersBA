@@ -2,25 +2,30 @@
     <div class="promo-cuotas">
         <h3> 6 cuotas sin interés con Visa </h3>
     </div>
-    <div class="burger-menu">
-        <i class="fa fa-bars burger"></i>
-    </div>
+
+    <nav class="burger">
+      <input type="checkbox" id="menu">
+      <label for="menu"> ☰ </label>
+      <ul>
+        <li><a class="access" href="/"> Index </a></li>
+        <li><a class="access" href="/productos"> Productos </a></li>
+        <li><a class="access" href="#"> Categorias </a></li>
+      </ul>
+    </nav>
+
     <div class="logo">
         <a href="/"><img id="snk-logo"src="/images/Logo1.png" alt="Logo Sneakers"></a>
         <a class="access" href="/productos"> Productos </a>
         <a class="access" href="#"> Categorias </a>
     </div>
 
+    
+
     <nav class="main-nav">
     </ul>
     <ul class="my-2 my-lg-0 navbar-nav">
     <% if(locals.usuario) { %> 
-            <!--Aquí dispongo  el acceso sólo al o los usuarios administradores-->
-      <% if(locals.usuario.role===9) { %>
-        <li class="nav-item">
-            <a class="nav-link" href="/administrar">Administrar</a>
-        </li>
-      <%}%>  
+    
 
       <li class="nav-item">
         <a class="nav-link" href="/logout">Cerrar sesión<ion-icon name="log-out-outline"></ion-icon></a>

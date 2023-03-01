@@ -14,14 +14,13 @@
                                    <div class="form-hijo">
                                         <!-- ----TÍTULO----  -->
                                         <div>
-                                             <h1 class="titulo">EDITANDO <%=shoeEditar.name %> </h1>
+                                             <h1 class="titulo">Editar producto </h1>
                                         </div>
-
 
                                         <div class="grupo">
                                              <!-- ----NOMBRE ----  -->
-                                             <div class="form-nombre">
-                                                  <label for="name">Nombre del producto</label></br></br>
+                                             <div>
+                                                  <label for="name">Nombre del producto</label>
                                                   <input type="text" name="nombre" required="required"
                                                        value="<%= shoeEditar.name %>" class="nombre-producto-create"
                                                        placeholder="EJ: Nike Jordan">
@@ -29,15 +28,15 @@
                                              </div>
 
                                              <!-- ----PRECIO----  -->
-                                             <div class="grupo">
-                                                  <label for="price">Precio</label></br></br>
+                                             <div>
+                                                  <label for="price">Precio</label>
                                                   <input type="number" name="precio" required="required"
                                                        value="<%= shoeEditar.price %>" class="precio-product-create">
                                              </div>
 
                                              <!-- ----CATEGORÍA----  -->
-                                             <div class="grupo">
-                                                  <label for="category">Categoría:</label></br></br>
+                                             <div>
+                                                  <label for="category">Categoría:</label>
                                                   <select class="textarea-input" id="categoria" name="categoria">
                                                        <option value="<%=shoeEditar.category.id %>" selected hidden><%=shoeEditar.category.name %>
                                                        </option>
@@ -46,26 +45,27 @@
                                                           <% }); %>
                                                   </select>
                                              </div>
+                                             <div>
+                                                  <!-- ----DESCRIPCION----  -->
+                                                         <div class="form-descipcion">
+                                                              <label for="description">Descripción</label>
+                                                              <textarea name="descripcion" required="required"
+                                                                   class="textarea-input"> <%= shoeEditar.description %>
+                                                              </textarea>
+                                                         </div>
+                                                    </div>  
+                                                    <!-- --- IMAGEN----  -->    
+                                                     <div>
+       
+                                                         <input type="hidden"  name="oldImagen"  value="<%= shoeEditar.image%>">
+                                                          <input type="file" name="imagen" >
+                                                         <label class="custom-file-label" for="inputGroupFile01">Seleccione una imagen...</label>-->
+                                                      </div>
+                                                    </div>
 
 
                                         </div>
-                                             <div class="grupo">
-                                           <!-- ----DESCRIPCION----  -->
-                                                  <div class="form-descipcion">
-                                                       <label for="description">Descripción</label></br>
-                                                       <textarea name="descripcion" required="required"
-                                                            class="textarea-input"> <%= shoeEditar.description %>
-                                                       </textarea>
-                                                  </div>
-                                             </div>  
-                                             <!-- --- IMAGEN----  -->    
-                                              <div class="grupo">
 
-                                                  <input type="hidden"  name="oldImagen"  value="<%= shoeEditar.image%>">
-                                                   <input type="file" name="imagen" >
-                                                  <label class="custom-file-label" for="inputGroupFile01">Seleccione una imagen...</label>-->
-                                               </div>
-                                             </div>
                                         
                                         <!-- ----BOTÓN "GUARDAR"----  -->
                                         <button type="submit" class="boton-guardar">EDITAR</button>

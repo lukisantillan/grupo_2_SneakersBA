@@ -5,6 +5,21 @@
     --violeta: #533483;
 }
 
+.perfil-usuario-header {
+    margin: auto;
+}
+
+.nav-item-admin {
+    text-align: center;
+width: 50vw;
+background: #fff;
+margin: auto;
+text-decoration: none;
+list-style: none;
+border-radius: 50px;
+padding: 15px
+}
+
 .seccion-perfil-usuario .perfil-usuario-body,
 .seccion-perfil-usuario {
     display: flex;
@@ -16,7 +31,7 @@
     background-size: cover;
     padding: 1%;
     border-radius: 40px;
-    margin: 100px;
+    margin: 33px;
 }
 
 .seccion-perfil-usuario .perfil-usuario-header {
@@ -24,7 +39,7 @@
     display: flex;
     justify-content: center;
     background: linear-gradient(--violeta, transparent);
-    margin-bottom: 1.25rem;
+    margin: 20px 20px;
 }
 
 
