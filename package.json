@@ -4,6 +4,7 @@
   "description": "-Somos un e-commerce dedicado al calzado deportivo, orientado a toda persona interesada en el mundo de los sneakers\r # Integrantes ✔️\r - Matias Rodriguez, 34 años. Empleado de comercio\r - Lucas Santillán, 19 años. Estudiante\r - Rubén Cabrera, 30 años. Fotógrafo\r - Daniel Barrientos, 59 años. Gerente de tecnología\r - Juan pablo Fernández, 20 años. Estudiante",
   "main": "src/app.js",
   "scripts": {
+    "start": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,8 +31,10 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.0.1",
-    "nodemon": "^2.0.20",
     "path": "^0.12.7",
     "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

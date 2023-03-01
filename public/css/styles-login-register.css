@@ -140,13 +140,23 @@ label {
     pointer-events: none;
 }
 
+.alert-danger{
+    color: red;
+}
+
 input#name:focus~label,
 input#name:valid~label {
     top: -14px;
     font-size: 12px;
     color: #0f3460;
 }
-
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: var(--violeta);
+    padding-top: 20px;
+}
 button {
     font-family: 'helvetica';
     background-color: #0f3460;

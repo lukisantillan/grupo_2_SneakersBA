@@ -45,6 +45,7 @@ router.get('/login',userController.login);
 
 router.post('/ingresar', ingresoValidations , userController.ingresar);
 
+router.get('/profile',userController.view);
 
 router.get('/registro', userController.registro);
 

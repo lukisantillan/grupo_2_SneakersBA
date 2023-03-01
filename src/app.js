@@ -9,7 +9,7 @@ const acceso = require('./middlewares/acceso');
 app.use(express.static(path.resolve(__dirname, '..', 'public')));
 app.set('view engine','ejs');
 app.use(express.urlencoded({ extended: false }));
-app.use(methodOverride('_method'));
+app.use(methodOverride('_method')); 
 app.use(session({
     secret : 'TopSecret',
     resave : true,

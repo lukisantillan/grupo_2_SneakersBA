@@ -7,15 +7,7 @@
   <%- include('../partials/header') %>
       <main>
 
-                      <!-- Aquí muestro los errores --->
-                      <% if(typeof(errors) != 'undefined'){%>
-                         <ul class="alert alert-danger">
-                            <% errors.forEach(error => { %>
-                               <li><%= error.msg%></li>
-                            <%});%>
-                          </ul>
-                      <%}%>    
-                      <!----Fin mostrar errores--------->
+                      
           <div class="contenido">
               <form method="post" action="/registro" id="form-padre" enctype="multipart/form-data" >
                   <div class="form-hijo">
@@ -50,7 +42,18 @@
                           <input type="file" class="form-control"   name="avatar"  placeholder="Debes eligir tu avatar...">
                       </div> 
 
+                      <!-- Aquí muestro los errores --->
+                      <% if(typeof(errors) != 'undefined'){%>
+                        <ul class="alert alert-danger">
+                           <% errors.forEach(error => { %>
+                              <li><%= error.msg%></li>
+                           <%});%>
+                         </ul>
+                     <%}%>    
+                     <!----Fin mostrar errores--------->
+
                       <button type="submit"> ENVIAR </button>
+                      <p class="warnings" id="warnings"></p>
 
                   </div>
               </form>

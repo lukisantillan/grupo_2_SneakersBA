@@ -1,35 +1,46 @@
-<%- include('partials/metadata') %>
-<link rel="stylesheet" href="/css/styles-index.css">
-<link rel="stylesheet" href="/css/styles.css">
-    </head>
+<%- include('../partials/metadata') %>
+    <link rel="stylesheet" href="/css/styles-index.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-profile.css">
+   
 
-    <body>
-        <%- include('partials/header') %>
-        <div class="bienvenida">
-            <h3> BIENVENID@ <%= usuarioLogueado.userName %>  <br> INDIQUE SU PREFERENCIA DE VISITA </h3>
-        </div>
+
+    <%- include('../partials/header') %>
+        <section class="seccion-perfil-usuario">
+            <% datos.forEach(function(dato) { %>
+            <div class="perfil-usuario-header">
+                <div class="perfil-usuario-portada">
+                    <div class="perfil-usuario-avatar">
+                        <img class="img-avatar" src="/images/avatars/<%= dato.avatar %>" alt="img-avatar">
+                    </div>
+                </div>
+            </div>
+            <div class="perfil-usuario-body">
+                <div class="perfil-usuario-footer">
+                    <h2 class="titulo"> NOMBRE Y APELLIDO</h2>
+                    <p> <%= dato.nombre %> <%= dato.apellido %> </p>
+                </div>
+                <div class="perfil-usuario-footer">
+                    <h2> CORREO ELECTRONICO </h2>
+                    <p> <%= dato.email %> </p>
+                </div>
+            </div>
+            <% }); %>
+        </section>
+
         <section class="main-products2">
             <div class="products">
                 <article>
-                    <a href="/products">
+                    <a href="/productos">
                         <img src="\images\productos.png" alt="productos" class="producto_img">
                         <h3>PRODUCTOS</h3>
                     </a>
-
-                </article>
-                <article>
-                    <img src="\images\marcas.png" alt="marcas" class="marcas_img">
-                    <h3>MARCAS</h3>
-                </article>
-                <article>
-                    <img src="\images\SALE.png" alt="sale" class="sale_img">
-                    <h3>SALES</h3>
                 </article>
             </div>
         </section>
-        
 
-            <%- include('partials/footer') %>
-    </body>
 
-    </html>
+        <%- include('../partials/footer') %>
+
+
+            </html>
