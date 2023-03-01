@@ -1,73 +1,40 @@
 <%- include('../partials/metadata') %>
-     <link rel="stylesheet" href="/css/styles-createProduct.css">
      <link rel="stylesheet" href="/css/styles.css">
+     <link rel="stylesheet" href="/css/styles-createProduct.css">
      </head>
 
      <body>
           <%- include('../partials/header') %>
                <main class="main-container">
+                         <!-- ----TÍTULO----  -->
+                         <div>
+                              <h1 class="titulo">Cargar producto </h1>
+                         </div>
 
                     <section>
-                         <div class="contenido">
-                              
-                              <form class="form-padre" method="POST" action="/administrar/create"
-                                   enctype="multipart/form-data">
-                                   <div class="form-hijo"></div>
+                         <form action="/administrar/create" method="POST" enctype="multipart/form-data">
+                              <label for="name">Nombre del producto</label>
+                              <input type="text" name="nombre" placeholder="Nombre del calzado" required="required">
 
-                                   <!-- ----TÍTULO----  -->
-                                   <div>
-                                        <h1 class="titulo">CARGAR PRODUCTO </h1>
-                                   </div>
+                              <label for="name">Descripcion</label>
+                              <textarea name="descripcion" placeholder="Descripcion" required="required" maxlength="300"></textarea>
 
+                              <label for="price">Precio</label>
+                              <input type="number" name="precio" placeholder="Ingresa el precio" required="required">
 
-                                   <div class="">
-                                        <!-- ----NOMBRE ----  -->
-                                        <div class="grupo">
-                                             <label for="name">Nombre del producto</label></br></br>
-                                             <input type="text" class="form-control" name="nombre" placeholder="Nombre del calzado" required="required" value="">
-                                             <input type="text" class="form-control" name="nombre" placeholder="Nombre del producto" required="required" value="">
-                                        </div>
-                                        <div class="">
-                                             <!-- ----DESCRIPCIÓN----  -->
-                                             <div class="form-descipcion">
-                                                  <label for="">Descripción</label></br></br>
-                                                  <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required="required" value="">
-                                             </div>
-     
-                                        </div>
+                              <label>Foto del producto</label>
+                              <input type="file" name="imagen">
 
-                                        <!-- ----PRECIO----  -->
-                                        <div class="grupo">
-                                             <label for="price">Precio</label></br></br>
-                                             <input type="number" class="form-control" name="precio" placeholder="Ingresa el precio" required="required" value="">
-                                        </div>
+                              <label for="category">Categoria</label>
+                              <select name="categoria" id="categoria" class="custom-select">
+                                   <option value="#" selected disabled>Seleccione su categoría...</option>
+                                   <% categorias.forEach(categoria => { %>
+                                     <option value="<%=categoria.id %>"><%=categoria.name %></option>
+                                   <% }); %>
+                                 </select>
 
-                                           <!-- ----foto----  -->
-                                           <div class="grupo" class="create-input-photo">
-                                             <label>Foto del producto</label>
-                                             <br>
-                                             <input type="file" name="imagen">
-                                        </div>
-
-                                        <!-- ----CATEGORÍA----  -->
-                                        <div class="grupo">
-                                             <label for="category">Categoría:</label></br></br>
-                                             <select name="categoria" id="categoria" class="custom-select">
-                                                  <option value="#" selected disabled>Seleccione su categoría...</option>
-                                                  <% categorias.forEach(categoria => { %>
-                                                    <option value="<%=categoria.id %>"><%=categoria.name %></option>
-                                                  <% }); %>
-                                                </select>
-                                        </div>
-
-                                     
-
-                                   </div>
-                                 
-                                   <!-- ----BOTÓN "GUARDAR"----  -->
-                                   <button type="submit" class="boton-guardar">Guardar</button>
-                              </form>
-                         </div>
+                                 <button type="submit" class="boton-guardar">Guardar</button>
+                         </form>
                     </section>
                </main>
                <%- include('../partials/footer') %>
