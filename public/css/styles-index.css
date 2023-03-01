@@ -132,6 +132,7 @@ a{
 .products {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 main section article{
@@ -150,8 +151,17 @@ main section article img{
     font-size: 5vw;
 }
 
+.main-products2 article h3 {
+    text-align: center;
+    color: #533483;
+    padding: 5px;
+    width: 26.4%;
+    background-color: white;
+}
+
 .main-products2 {
-    display: none;
+    display: flex;
+    align-items: center;
 }
 
 .products article p {

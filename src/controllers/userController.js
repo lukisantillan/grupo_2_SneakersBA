@@ -27,7 +27,7 @@ const userController = {
         datos,
       });
     } else {
-      res.send("logueate la concha de tu madre");
+      res.redirect("/login");
     }
   },
 
@@ -38,21 +38,25 @@ const userController = {
     db.User.findAll().then((users) => {
       let errors = validationResult(req);
       let usuarioLogueado = [];
-      if (req.body.email != "" && req.body.password != "") {
+      if (req.body.email != "") {
         usuarioLogueado = users.filter(function (user) {
           return user.email === req.body.email;
+        })
+      } if (usuarioLogueado.length === 0) {
+        return res.render(path.resolve(__dirname, "../views/usuarios/login"), {
+          errors: [{ msg: "Correo Incorrecto" }],
         });
-        if (
-          bcrypt.compareSync(req.body.password, usuarioLogueado[0].password) ===
-          false
-        ) {
-          usuarioLogueado = [];
-        }
+      };
+      if (
+        bcrypt.compareSync(req.body.password, usuarioLogueado[0].password) ===
+        false
+      ) {
+        usuarioLogueado = [];
       }
 
       if (usuarioLogueado.length === 0) {
         return res.render(path.resolve(__dirname, "../views/usuarios/login"), {
-          errors: [{ msg: "Credenciales invalidas" }],
+          errors: [{ msg: "Contraseña incorrecta" }],
         });
       } else {
         req.session.usuario = usuarioLogueado[0];
@@ -107,11 +111,11 @@ const userController = {
     Product.findByPk(req.params.id, {
       include: [{ association: "category" }],
     })
-    .then((myShoe) => {
-      res.render(
-        path.resolve(__dirname, "..", "views", "admin", "productDetail"),
-        { myShoe }
-      );
+      .then((myShoe) => {
+        res.render(
+          path.resolve(__dirname, "..", "views", "admin", "productDetail"),
+          { myShoe }
+        );
       })
       .catch((error) => res.send(error));
   },

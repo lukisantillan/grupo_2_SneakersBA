@@ -8,7 +8,7 @@ const db = require('../database/models');
 const User = db.User;
 
 
-const ingresoValidations = require('../middlewares/ingresoValidation');
+const loginValidations = require("../middlewares/loginValidations");
 const registerValidations = require('../middlewares/registerValidation')
 
 
@@ -43,7 +43,7 @@ router.get('/cart' ,userController.cart);
 
 router.get('/login',userController.login);
 
-router.post('/ingresar', ingresoValidations , userController.ingresar);
+router.post('/ingresar', loginValidations , userController.ingresar);
 
 router.get('/profile',userController.view);
 
