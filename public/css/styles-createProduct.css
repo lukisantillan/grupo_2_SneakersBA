@@ -71,6 +71,15 @@ form#form-padre {
 
 }
 
+.grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo div {
+    margin: 10px auto;
+}
+
 div.form-hijo {
     width: 80%;
     margin: auto;

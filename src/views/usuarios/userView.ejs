@@ -28,16 +28,13 @@
             <% }); %>
         </section>
 
-        <section class="main-products2">
-            <div class="products">
-                <article>
-                    <a href="/productos">
-                        <img src="\images\productos.png" alt="productos" class="producto_img">
-                        <h3>PRODUCTOS</h3>
-                    </a>
-                </article>
-            </div>
-        </section>
+        <% if(locals.usuario.role===9) { %>
+            <li class="nav-item-admin">
+                <a class="nav-link" href="/administrar">Administrar</a>
+            </li>
+          <%}%> 
+
+
 
 
         <%- include('../partials/footer') %>
