@@ -8,7 +8,7 @@
             <main>
                 <div>
                     <ul id="errores"> </ul>
-                  </div>
+                </div>
 
 
                         <div class="contenido">
@@ -18,13 +18,13 @@
                                     <h1> INICIA SESIÓN </h1>
 
                                     <div class="grupo">
-                                        <input type="text" name="email" id="name" required minlength="5"><span
+                                        <input type="text" name="email" class="name" ><span
                                             class="barra"></span>
                                         <label for=""> Email: </label>
                                     </div>
 
                                     <div class="grupo">
-                                        <input type="password" name="password" id="name" required minlength="8"><span
+                                        <input type="password" name="password" class="name" ><span
                                             class="barra"></span>
                                         <label for=""> Contraseña: </label>
                                         <% if(typeof(errors) != 'undefined'){%>
@@ -59,8 +59,14 @@
                             </form>
 
                         </div>
+
+             
             </main>
+
+            
+
             <%- include('../partials/footer') %>
     </body>
-
+ 
+    <script src="/js/login.js"></script>
     </html>
