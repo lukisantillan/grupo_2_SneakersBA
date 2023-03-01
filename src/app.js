@@ -10,10 +10,11 @@ app.use(express.static(path.resolve(__dirname, '..', 'public')));
 app.set('view engine','ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method')); 
+app.use(cookies());
 app.use(session({
     secret : 'TopSecret',
-    resave : true,
-    saveUninitialized : true
+    resave : false,
+    saveUninitialized :false
 }));
 app.use(cookies());
 app.use(acceso);
