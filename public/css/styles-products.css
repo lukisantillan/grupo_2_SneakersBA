@@ -11,6 +11,10 @@
   text-align: center;
 }
 
+.admin-class {
+  overflow-x: auto;
+}
+
 .product-box {
   display: flex;
   justify-content: center;

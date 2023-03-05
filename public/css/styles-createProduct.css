@@ -6,35 +6,74 @@
 }
 
 
-.main-container{
-    margin: 10px;
-}
-
-.data-products{
-    display: flex;
-    justify-content: center;
-
-}
+*{box-sizing:border-box;}
 
 .titulo{
-    font-size: 30px;
+    font-size: 100%vh;
     color: var(--rosa);
-    font-style: italic;
+    text-align: center;
+    margin: 15px auto;
     
 
 }
 
-label{
-    margin: 10px;
-    font-size: 18px;
-    color: white;
-    padding: 10px 5px;
+form{
+	width:300px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:rgb(197, 197, 197);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
+
+form label{
+	width:100%;
+	font-weight:bold;
+    margin: 10px auto;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:auto;
+}
+
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border-radius:5px;
+	color:#fff;
+	background-color:#000;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+}
+
 
 button.boton-guardar {
     width: 50%;
     padding: 5px;
-    margin-top: 40px;
+    margin: 40px auto;
     color: rgb(0, 0, 0);
     height: 70px;
     font-size: 20px;
@@ -49,83 +88,3 @@ button.boton-guardar:hover {
     color: var(--azul-claro);
 }
 
-div.contenido {
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h1 {
-    text-align: center;
-    font-weight: 700;
-    margin-bottom: 35px;
-
-}
-
-form#form-padre {
-    background: #fff;
-    padding: 20px 0px;
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-
-}
-
-.grupo {
-    display: flex;
-    flex-direction: column;
-}
-
-.grupo div {
-    margin: 10px auto;
-}
-
-div.form-hijo {
-    width: 80%;
-    margin: auto;
-    justify-content: center;
-}
-
-div.form-hijo .grupo {
-    position: relative;
-    margin: 35px;
-
-}
-
-input#name, #price, #categoria-create, #description {
-    color: black;
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #16213e
-}
-
-input#name:focus {
-    outline: none;
-    color: #5e5d5d
-}
-
-
-
-button {
-    font-family: 'helvetica';
-    background-color: #0f3460;
-    border: none;
-    display: block;
-    width: 80%;
-    margin: 15px auto;
-    color: #fff;
-    height: 25px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-
-section{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    
-}
