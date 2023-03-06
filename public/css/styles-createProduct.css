@@ -88,3 +88,20 @@ button.boton-guardar:hover {
     color: var(--azul-claro);
 }
 
+/*estilos de errores */
+span.error{
+    background-color: #ebebeb;
+    text-align: center;
+    margin-top: 2%;
+    display: block;
+    color: #e94560;
+    padding: 5px;
+}
+
+span#categoria-error{
+    text-align: center;
+    margin-top: 2%;
+    display: block;
+    color: #e94560;
+    padding: 5px;
+}

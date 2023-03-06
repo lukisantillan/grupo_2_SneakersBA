@@ -15,27 +15,34 @@
                          <form action="/administrar/create" method="POST" enctype="multipart/form-data">
                               <label for="name">Nombre del producto</label>
                               <input type="text" name="nombre" placeholder="Nombre del calzado" required="required">
+                              <span></span>
 
                               <label for="name">Descripcion</label>
                               <textarea name="descripcion" placeholder="Descripcion" required="required" maxlength="300"></textarea>
+                              <span></span>
 
                               <label for="price">Precio</label>
                               <input type="number" name="precio" placeholder="Ingresa el precio" required="required">
+                              <span></span>
 
                               <label>Foto del producto</label>
                               <input type="file" name="imagen">
+                              <span></span>
 
                               <label for="category">Categoria</label>
                               <select name="categoria" id="categoria" class="custom-select">
-                                   <option value="#" selected disabled>Seleccione su categoría...</option>
+                                   <option value="" selected disabled>Seleccione su categoría...</option>
                                    <% categorias.forEach(categoria => { %>
-                                     <option value="<%=categoria.id %>"><%=categoria.name %></option>
+                                   <option value="<%=categoria.id %>"><%=categoria.name %></option>
                                    <% }); %>
-                                 </select>
+                              </select>
+                              <span id="categoria-error"></span>
 
-                                 <button type="submit" class="boton-guardar">Guardar</button>
+                              <button type="submit" class="boton-guardar">Guardar</button>
                          </form>
                     </section>
+                    <script src="/js/productcreate.js"></script>
+
                </main>
                <%- include('../partials/footer') %>
      </body>

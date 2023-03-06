@@ -19,6 +19,19 @@ const validarCampoVacio = (mensage, e) => {
     }
 }
 
+const caracteresPassword = e => {
+    const campo =e.target;
+    if(campoPassword.value.trim().length < 8){
+        campo.classList.add("invalido");
+        campo.nextElementSibling.classList.add("error");
+        campo.nextElementSibling.innerText = "La contraseña debe contener al menos 8 caracteres";
+    } else{
+        campo.classList.remove("invalido");
+        campo.nextElementSibling.classList.remove("error");
+        campo.nextElementSibling.innerText="";
+    }
+}
+
 const validarFormatoEmail = e => {
     const campo = e.target;
     const campoValue = e.target.value;
@@ -27,13 +40,17 @@ const validarFormatoEmail = e => {
         campo.classList.add("invalido");
         campo.nextElementSibling.classList.add("error");
         campo.nextElementSibling.innerText = "Por favor ingrese un email valido";
+    }else{
+        campo.classList.remove("invalido");
+        campo.nextElementSibling.classList.remove("error");
+        campo.nextElementSibling.innerText="";
     }
 }
 
 
 const confirmarContraseña = e => {
     const campo = e.target;
-
+    const campoValue = e.target.value;
     if(campoPassword.value != campoConfirmarPassword.value){
         campo.classList.add("invalido");
         campo.nextElementSibling.classList.add("error");
@@ -57,6 +74,8 @@ campoConfirmarPassword.addEventListener("blur", (e) => validarCampoVacio("Debes 
 
 campoEmail.addEventListener("input", validarFormatoEmail);
 
+campoPassword.addEventListener("input", caracteresPassword);
+
 campoConfirmarPassword.addEventListener("input", confirmarContraseña);
 
 campoAvatar.addEventListener("change", (e) => {
@@ -74,3 +93,5 @@ campoAvatar.addEventListener("change", (e) => {
     }
 
 });
+
+
