@@ -5,7 +5,6 @@ const validarCampoVacio = (mensage, e) => {
     const campo = e.target;
     const campoValue = e.target.value;
     if (campoValue.trim().length === 0){
-        console.log("debes escrivir")
         campo.classList.add("invalido");
         campo.nextElementSibling.classList.add("error");
         campo.nextElementSibling.innerText = mensage;
