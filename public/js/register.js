@@ -24,7 +24,7 @@ const caracteresPassword = e => {
     if(campoPassword.value.trim().length < 8){
         campo.classList.add("invalido");
         campo.nextElementSibling.classList.add("error");
-        campo.nextElementSibling.innerText = "La contraseña debe contener al menos 8 caracteres";
+        campo.nextElementSibling.innerText = "Al menos 8 caracteres";
     } else{
         campo.classList.remove("invalido");
         campo.nextElementSibling.classList.remove("error");
@@ -85,7 +85,7 @@ campoAvatar.addEventListener("change", (e) => {
     if(!extensionesPermitidas.includes(extensionesAvatar)){
         campo.classList.add("invalido");
         campo.nextElementSibling.classList.add("error");
-        campo.nextElementSibling.innerText= `Los únicos formatos permitidos son ${extensionesPermitidas.join(", ")}`;
+        campo.nextElementSibling.innerText= `Formatos permitidos ${extensionesPermitidas.join(", ")}`;
     }else{
         campo.classList.remove("invalido");
         campo.nextElementSibling.classList.remove("error");
