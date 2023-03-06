@@ -31,7 +31,7 @@
 
                               <label for="category">Categoria</label>
                               <select name="categoria" id="categoria" class="custom-select">
-                                   <option value="" selected disabled>Seleccione su categoría...</option>
+                                   <option value="#" selected disabled>Seleccione su categoría...</option>
                                    <% categorias.forEach(categoria => { %>
                                    <option value="<%=categoria.id %>"><%=categoria.name %></option>
                                    <% }); %>

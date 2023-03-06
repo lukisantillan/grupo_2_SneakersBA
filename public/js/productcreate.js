@@ -48,7 +48,7 @@ campoAvatar.addEventListener("change", (e) => {
 
 
 
-const form = document.querySelector('form');
+/*const form = document.querySelector('form');
 const categoriaSelect = document.querySelector('#categoria');
 const categoriaError = document.querySelector('#categoria-error');
 
@@ -61,4 +61,4 @@ form.addEventListener('submit', (event) => {
     categoriaError.textContent = '';
     
   }
-});
+});*/
