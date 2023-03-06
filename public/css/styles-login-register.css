@@ -81,6 +81,64 @@ a {
 
 /*Style css register*/
 
+.burger {
+    margin: auto;
+  }
+  
+  .burger input:checked  ~ ul{
+    display:block;
+  }
+  
+  .burger input {
+    display: none;
+  }
+  
+ .burger label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+  }
+  
+  /* Estilo del boton cuando se pasa el mouse por encima*/
+  .burger label:hover{
+    background: grey;
+  }
+  
+  /* Estilo del boton cuando el menú está expandido*/
+ .burger  input:checked ~ label {
+    background: lightgrey; 
+  }
+  
+  .burger ul{
+    margin-top:0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+  }
+  
+  
+  .burger li {
+    display: block;
+    background: lightgrey;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid grey;
+  }
+  
+  /*Estilo cuando el mouse pasa encima de cada link del menu*/
+ .burger li:hover {
+    filter: brightness(110%);
+  }
+
 div.contenido {
     height: 650px;
     display: flex;
@@ -130,7 +188,7 @@ input.name:focus {
     color: #5e5d5d
 }
 
-label {
+.grupo label {
     color: #565454;
     font-size: 16px;
     position: absolute;
