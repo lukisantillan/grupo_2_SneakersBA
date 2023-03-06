@@ -273,15 +273,15 @@ div.flex-media-query {
 
 /*estilos de errores de login*/
 
-#errores{display: none;}
 
 
-#errores.conerrores{
+
+span.barra.error{
     background-color: #ebebeb;
     text-align: center;
-    margin-top: 14%;
+    margin-top: 2%;
     display: block;
-    color: #533483;
+    color: #e94560;
     padding: 5px;
 }
 

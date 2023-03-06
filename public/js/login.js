@@ -1,49 +1,35 @@
-window.addEventListener("load", function(){
+const campoEmail = document.querySelector("[name=email]");
+const campoPassword = document.querySelector("[name=password]")
 
-
-    const formulario = document.querySelector('#form-padre');
-    const divErrores = document.querySelector('#errores');
-    
-    
-    formulario.email.focus()
-    
-    
-    const envioFormulario = (event) => {
-        event.preventDefault();
-    
-    
-        divErrores.innerHTML = '';
-    
-    
-    
-    
-        const campoEmail = formulario.email;
-        const campoPassword = formulario.password;
-    
-    
-    
-    
-        if (campoEmail.value == '') {
-            divErrores.innerHTML += '<li> El campo email está vacío </li>'
-        }
-    
-        if (campoPassword.value == '') {
-            divErrores.innerHTML += '<li> El campo password está vacío </li>'
-        }
-    
-    
-    
-    /*consulto si hay errores para asignar la clase al <ul> y hacer la lista visible con css*/ 
-    
-        if (divErrores.innerHTML !== "") {
-    
-            
-            divErrores.classList.add("conerrores");
-          }
-    
+const validarCampoVacio = (mensage, e) => {
+    const campo = e.target;
+    const campoValue = e.target.value;
+    if (campoValue.trim().length === 0){
+        console.log("debes escrivir")
+        campo.classList.add("invalido");
+        campo.nextElementSibling.classList.add("error");
+        campo.nextElementSibling.innerText = mensage;
+    } else{
+        campo.classList.remove("invalido");
+        campo.nextElementSibling.classList.remove("error");
+        campo.nextElementSibling.innerText="";
     }
-    
-    formulario.addEventListener('submit', envioFormulario)
-    
-    
-    })
+}
+
+const validarFormatoEmail = e => {
+    const campo = e.target;
+    const campoValue = e.target.value;
+    const regex = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/);
+    if(campoValue.trim().length > 5 && !regex.test(campoValue)){
+        campo.classList.add("invalido");
+        campo.nextElementSibling.classList.add("error");
+        campo.nextElementSibling.innerText = "Por favor ingrese un email valido";
+    }
+}
+
+
+campoEmail.addEventListener("blur", (e) => validarCampoVacio("Ingresa tu email ", e));
+
+campoPassword.addEventListener("blur", (e) => validarCampoVacio("Debes ingresar una contraseña", e));
+
+campoEmail.addEventListener("input", validarFormatoEmail)
